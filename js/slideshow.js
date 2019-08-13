@@ -22,9 +22,9 @@ $(document).ready(function() {
             slideshow.css("left", leftvalue - imageSize);
         }
         
-        setTimeout(moveSlide, 3000)
+        setTimeout(moveSlide, 10000)
     }
     
     
-    setTimeout(moveSlide, 3000)
+    setTimeout(moveSlide, 10000)
 });

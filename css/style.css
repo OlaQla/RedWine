@@ -29,13 +29,14 @@ html, body {
 
 #main {
   overflow: auto;
+  height: 100vh;
   padding-bottom: 3em;
 }
 
 #header {
   background-color: #3D191D;
   width: 100%;
-  height: auto;
+  height: 8em;
   margin: 0;
 }
 
@@ -231,7 +232,7 @@ h1 {
 
 /*-------------------------------------HomePage------*/
 .home-section {
-  height: 100vh;
+  height: calc(100vh - 11em);
   width: 100%;
 }
 
@@ -328,18 +329,15 @@ h1 {
 }
 
 .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  top: -39em;
+  left: 0;
+  height: 5em;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.quote {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.quote p {
+.wrap p {
   margin: 4.5em 0.5em 4.5em 0;
   font-family: "Calligraffitti", sans-serif;
   font-size: 2em;

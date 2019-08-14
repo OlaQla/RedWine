@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Calligraffitti:100,200,300,400,500,600,700');
-
-/* colors */
-$wine: #3D191D;
-$text: #fafafa;
-$lightWine: #C3B9BA;
-$grey:#515a5f;
-
-/*--------------------------heading*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Calligraffitti:100,200,300,400,500,600,700|Josefin Sans:100,200,300,400,500,600,700');
 :root {
     box-sizing: border-box;
     font-size: calc(1vw + 0.6em);
@@ -23,23 +15,89 @@ $grey:#515a5f;
     padding:0;
 }
 
-html, body {
+html {
     height: 100%;
 }
 
-#main-container{
-    min-height: 100%;
+
+/* ---------------------------------colors */
+$wine: #3D191D;
+$text: #fafafa;
+$plum: #3b1d2bf7;
+$grey:#515a5f;
+$ageVerifyOverlay: linear-gradient(to right top, #3d191d, #3d1a20, #3d1a23, #3d1b25, #3c1c28, #3a1d2c, #381f30, #352134, #2f2439, #28273c, #202a3d, #192c3d);
+
+/*---------------------------age verify overlay----------------*/
+
+#ageVerifyOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: $ageVerifyOverlay;
+    opacity:0.99;
+    z-index: 1000;
+
+    .verifyAge{
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 3em;
+        color: $text;
+        text-align: center;
+        padding-top: 1em;
+
+        span {
+            font-size:0.5em;
+        }
+    }
+
+    /*---------------------------- day of birth selector -------------*/
+
+    .daySelector{
+    display: flex;
+    margin:auto;
+    max-width: 25em;
+    padding-top: 1em;
+
+    .btn{
+        flex:1;
+        height: 3.5em;
+        font-size: 0.7em;
+        :first-child {
+            font-weight: bold;
+            }
+        }
+    }
+    .submitWrap{
+        margin-top: 5em;
+        display: block;
+        text-align: center;
+        
+        
+    .submit {
+        height: 3.5em;
+        font-size: 0.7em;
+        padding: 1em;
+        }
+    }
 }
 
-#main{
-    overflow: auto;
-    height: 100vh;
-    padding-bottom:3em;
+
+/*------------------------------------------------heading*/
+
+.site {
+    min-height: 100vh;
+    flex-direction: column;
+  }
+#main-container{
+        padding-bottom: 2.5em;
+       
 }
+
+
+
 #header{
     background-color:$wine;
     width: 100%;
-    height: 8em;
+    height: 4.7em;
     margin:0;
 }
 
@@ -47,14 +105,14 @@ html, body {
 h1 {
     font-family: "Calligraffitti", sans-serif;
     font-weight: 500;
+    font-size: 1.5em;
     color:$text;
     padding: 0;
-    padding-top: 0.7em;
+    padding-top: 0.3em;
      margin:0;
     letter-spacing: 0.2em;
     text-align: center;
 }
-
 .menu{
     position: relative;
 }
@@ -88,8 +146,9 @@ h1 {
     position: absolute;
     right: 0;
     left: 0;
-    top:1.8em;
+    top:0em;
     margin:0;
+    z-index: 1000;
 }
 
 
@@ -107,27 +166,27 @@ h1 {
 .menuitem {
 
     text-decoration: none;
-    height: 3em;
+    height: 4em;
     text-align: left;
     padding: 0;
-    border-bottom: 2px solid #37474F;
-    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid $text;
+    background-color: $plum;
 }
 
 .menuitem a {
     text-decoration: none;
-    color: black;
+    color:$text;
 }
 
 .menuitem span {
     font-family: "Roboto", sans-serif;
     display: block;
     width: 100%;
-    padding: 15px 15px;
+    padding: 0.9em 0.9em;
     text-align: left;
     text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 500;
     letter-spacing: 2px;
 }
 @media (max-width: 767px){
@@ -168,9 +227,8 @@ h1 {
         border-bottom: none;
         text-align: center;
         span{
-            font-size: 0.8em;
+            font-size: 0.6em;
             color: $text;
-            
             padding:0;
         }
     }
@@ -182,7 +240,7 @@ h1 {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
-    padding: 0.8em 1.3em;
+    padding: 0.4em 1.3em;
     position: relative;
 
     :after {    
@@ -212,8 +270,8 @@ h1 {
 #footer {
     background-color: $wine;
     position: relative;
-    height: 3em;
-    margin-top: -3em;  
+    height: 2.5em;
+    margin-top: -2.5em;  
     clear: both;
     width: 100%;
     
@@ -239,8 +297,8 @@ h1 {
 .list-item {
     width: 1em;
     height: 1em;
-    padding-top: 1em;
-    padding-bottom: 0;
+    padding-top: 0.6em;
+    padding-bottom: 0.2em;
     padding-right: 1em;
     display: inline-table;
     background-color: transparent;
@@ -259,8 +317,9 @@ h1 {
 
 
 .home-section{ 
-    height: calc(100vh - 11em);
+    height: calc(100vh - 7.2em);
     width: 100%;
+
     .slide-holder
     {
         width: 100vw;
@@ -398,11 +457,10 @@ h1 {
     width: 3em;
     :hover{
         width: 6em;
-        -webkit-transition: width 1s ease-in-out;
-        -moz-transition: width 1s ease-in-out;
-        -o-transition: width 1s ease-in-out;
-        transition: width 1s ease-in-out;
-    
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
     }
 
     .aside-twitter{

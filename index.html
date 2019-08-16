@@ -13,38 +13,44 @@
 
 <body class="site">
     <!----------------------------age verify overlay----------------->
-    <div id="ageVerifyOverlay" style="display: none">
-        <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of birth:</span>
-        </p>
-        <!----------------- day of birth selector------------------->
-        <div class="daySelector">
-            <select class=" btn day">
-                <option value="0">Select day:</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-
-            <select class=" btn month">
-                <option value="0">Select month:</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-            </select>
-
-            <select class=" btn year">
-                <option value="0">Select year:</option>
-                <option value="1">1970</option>
-                <option value="2">1971</option>
-                <option value="3">1972</option>
-            </select>
-
+    <div id="ageVerifyOverlay">
+        <!------------person below 18 years old comunicat---->
+        <div class="tooYoung" style="display:none">
+            Sorry, you're too young to visit this site. Pleas come back in:
         </div>
-        <div class="submitWrap">
-            <input type="submit" value="Submit" class="submit btn">
-        </div>
+        <div class="wrapAgeVerify" >
+            <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
+                    birth:</span>
+            </p>
+            <!----------------- day of birth selector------------------->
 
+            <div class="daySelector">
+                <select class=" btn day">
+                    <option value="0">Select day:</option>
+                </select>
+
+                <select class=" btn month">
+                    <option value="0">Select month:</option>
+                </select>
+
+                <select class=" btn year">
+                    <option value="0">Select year:</option>
+                </select>
+
+            </div>
+
+            <!--- wrong input comunicat-->
+            <div class="wrongInput" style="display: none">Please enter your day of birth DD/MM/YYYY
+            </div>
+
+            <!-- submite button-->
+            <div class="submitWrap">
+                <input type="submit" value="Confirm" class="submit btn">
+            </div>
+        </div>
     </div>
+
+    <!----------------------------------------Home page----------------->
     <div id="main-container">
         <div id="main">
             <header id="header" class="page-header">
@@ -141,7 +147,7 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/hamburgerMenu.js"></script>
     <script type="text/javascript" src="js/slideshow.js"></script>
-
+    <script type="text/javascript" src="js/ageVerify.js"></script>
 </body>
 
 </html>

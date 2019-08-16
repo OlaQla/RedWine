@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Calligraffitti:100,200,300,400,500,600,700|Josefin Sans:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Josefin+Sans|Roboto&display=swap');
 :root {
     box-sizing: border-box;
     font-size: calc(1vw + 0.6em);
@@ -38,11 +38,12 @@ $ageVerifyOverlay: linear-gradient(to right top, #3d191d, #3d1a20, #3d1a23, #3d1
     z-index: 1000;
 
     .verifyAge{
-        font-family: "Josefin Sans", sans-serif;
+        font-family: 'Josefin Sans', sans-serif;
         font-size: 3em;
         color: $text;
         text-align: center;
-        padding-top: 1em;
+        padding: 3em 1em 0 1em;
+        
 
         span {
             font-size:0.5em;
@@ -74,13 +75,52 @@ $ageVerifyOverlay: linear-gradient(to right top, #3d191d, #3d1a20, #3d1a23, #3d1
         
     .submit {
         height: 3.5em;
-        font-size: 0.7em;
+        width: 8em;
+        font-size: 0.9em;
         padding: 1em;
         }
+    }
+    .wrongInput{
+    
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2em;
+        color: red;
+        text-align: center;
+        margin-top:2em;
+    }
+    
+    .tooYoung{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.8em;
+        text-align: center;
+        color: $text;
+       margin-top:30%;
+       margin-left: 10%;
+       margin-right: 10%;
+    
     }
 }
 
 
+
+@media (min-width: 1025px){
+#ageVerifyOverlay {
+    .verifyAge{
+        font-size:2em;
+        padding-top:2em;
+        }
+    .tooYoung{
+        margin-top:10%;
+        }
+    .wrongInput{
+        font-size: 1em;
+    }
+
+    .submitWrap{
+        margin-top:3em;
+    }
+    }
+}
 /*------------------------------------------------heading*/
 
 .site {

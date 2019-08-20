@@ -1,13 +1,18 @@
+$(document).ready(function(){
 
-$(".pOrigin").hide();
-$(".pTasting").hide();
+     $(".pOrigin").hide();
+     $(".pTasting").hide();
 
-$(".origin").click(function(){
-     $(".pOrigin").toggle("slow");
+     $(".origin").click(function(){
+          var parentCard =  $(this).parents(".card").first();
+          parentCard.find(".contentGrapes p").filter(":not(.pOrigin)").hide();
+          parentCard.find(".pOrigin").toggle("slow");
+     });
+
+     $(".tasting").click(function(){
+          var parentCard = $(this).parents(".card").first();
+          parentCard.find(".contentGrapes p").filter(":not(.pTasting)").hide();
+          parentCard.find(".pTasting").toggle("slow");
+     });
 });
-
-$(".tasting").click(function(){
-     $(".pTasting").toggle("slow");
-});
-
 

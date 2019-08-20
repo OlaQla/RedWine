@@ -1,19 +1,13 @@
-//function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-//}
+$(".pOrigin").hide();
+$(".pTasting").hide();
 
-$("#myBtn").click(function() {
-    $(this).siblings("p").slideToggle(1000)
-})
+$(".origin").click(function(){
+     $(".pOrigin").toggle("slow");
+});
+
+$(".tasting").click(function(){
+     $(".pTasting").toggle("slow");
+});
+
+

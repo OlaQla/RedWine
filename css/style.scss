@@ -635,31 +635,13 @@ h1 {
       font-size: 1.2em;
       text-align: justify;
   }
-#more{
-  display:none;  
-}
 
-#myBtn{
-width:6em;
-height:2em;
-border-radius:0.5em;
-margin-top:1em;
-background-color: rgba(219, 244, 124, 0.5);
--webkit-transition: background-color 0.5s ease-out;  
--moz-transition: background-color 0.5s ease-out;  
--o-transition: background-color 0.5s ease-out;  
-transition: background-color 0.5s ease-out;  
 
--webkit-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
--moz-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
-outline:none;
-border: none;
-}
 
 @media (min-width: 768px){
     #gridGrapes{
         margin: 0px 2.5em 0px;
+        
     }
 
     .grapes img{
@@ -668,17 +650,35 @@ border: none;
     .contentGrapes{
         font-size:1.3em;
     }
-    
+    .titleGrapes{
+        font-size: 2em;
+    }
+
+    .varieties{
+        font-size: 2.5em;
+    }
   }
   @media (min-width: 1024px){
     #gridGrapes{
     grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
-    margin:0 4em 0;
+    margin-left: 5em;
+    margin-right: 5em;
+
     }
-  }
   @media (min-width: 1025px){
     .contentGrapes{
         font-size:0.7em;
     }
+
+    .varieties{
+        font-size: 1.5em;
+    }
+    #gridGrapes{
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    margin:0 1em 0;
   }
-  
+  .titleGrapes{
+    font-size: 1em;
+}
+}
+}

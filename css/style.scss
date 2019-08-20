@@ -24,7 +24,10 @@ html {
 $wine: #3D191D;
 $text: #fafafa;
 $plum: #3b1d2bf7;
-$grey:#515a5f;
+$grey:#282D2F;
+$twitterBlue:#00aced;
+$facebookBlue: #3C5A99;
+$youtubeRed: #c4302b;
 $ageVerifyOverlay: linear-gradient(to right top, #3d191d, #3d1a20, #3d1a23, #3d1b25, #3c1c28, #3a1d2c, #381f30, #352134, #2f2439, #28273c, #202a3d, #192c3d);
 
 /*---------------------------age verify overlay----------------*/
@@ -74,11 +77,22 @@ $ageVerifyOverlay: linear-gradient(to right top, #3d191d, #3d1a20, #3d1a23, #3d1
         
         
     .submit {
+        font-weight: bold;
         height: 3.5em;
         width: 8em;
         font-size: 0.9em;
         padding: 1em;
+        background-color: #193d39;
+        color:$text;
+        opacity:1;
         }
+
+    }
+
+    .submit:hover{
+        background-color: $text;
+        opacity: 0.7;
+        color: black;
     }
     .wrongInput{
     
@@ -171,6 +185,7 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     color:$text;
+    outline:none;
 }
 
 .menu-toggle::after {
@@ -180,6 +195,7 @@ h1 {
     display: block;
     content: "\2261";
     text-indent: 0;
+    outline:none;
 }
 .menu-dropdown {
     display: none;
@@ -209,7 +225,7 @@ h1 {
     height: 4em;
     text-align: left;
     padding: 0;
-    border-bottom: 2px solid $text;
+    border-bottom: 1px solid $text;
     background-color: $plum;
 }
 
@@ -496,7 +512,7 @@ h1 {
     height: 6em;
     width: 3em;
     :hover{
-        width: 6em;
+        width: 4em;
         -webkit-transition: width 0.5s ease-in-out;
         -moz-transition: width 0.5s ease-in-out;
         -o-transition: width 0.5s ease-in-out;
@@ -504,15 +520,15 @@ h1 {
     }
 
     .aside-twitter{
-        background-color: #00aced;
+        background-color: $twitterBlue;
     }
 
     .aside-facebook {
-        background-color: #3C5A99;
+        background-color: $facebookBlue;
     }
 
     .aside-youtube {
-        background-color: #c4302b;
+        background-color: $youtubeRed;
     }
 }
 
@@ -531,5 +547,138 @@ h1 {
     }
 }
 
+/*-----------------------------------------Grapes page---------------------*/
+.grape-section{
+    height:100%;
+    margin-bottom: 2em;
+    
+  }
+  .varieties{
+    font-family: "Calligraffitti", sans-serif;
+    font-weight: 700;
+    color:$grey;
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    margin: 2em auto 2em;
+  
+  
+  }
+  
+  #gridGrapes {
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 0.6em;
+    grid-auto-flow: dense;
+    margin: 0px 1em 0px;
+  }
 
+ 
+  
+  #gridGrapes > * {
+    background-color: $text;
+    color:$grey;
+    border: solid 1px rgba(0, 0, 0, 0.1 );
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 0.5em;
+  }
+  .cards{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grapes{
+    flex: 1;
+    width:auto;
+    margin:0;
+  }
+  .grapes img{
+    width:100%;
+    border: solid 1px rgba(0, 0, 0, 0.1 );
+    padding: 0.5em 0.5em;
+    max-height:300px;
+  }
 
+  .titleGrapes{
+      font-family: "Roboto", sans-serif;
+      font-weight:700;
+      padding: 1em 0;
+      text-align: center
+  }
+
+  .bntGrapes{
+      width: 8em;
+      height:3em;
+      border-radius: 0.5em;
+      margin: 1em;
+      background: $text;
+      font-size:0.7em;
+      background-color: #dbf47c;
+      -webkit-transition: background-color 0.5s ease-out;  
+      -moz-transition: background-color 0.5s ease-out;  
+      -o-transition: background-color 0.5s ease-out;  
+      transition: background-color 0.5s ease-out;  
+
+      -webkit-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+      -moz-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+     box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+     outline:none;
+     border: none;
+      }
+  .bntGrapes:hover{
+      background-color: #f1f285;
+  }
+  
+  .contentGrapes p{
+      font-size: 1.2em;
+      text-align: justify;
+  }
+#more{
+  display:none;  
+}
+
+#myBtn{
+width:6em;
+height:2em;
+border-radius:0.5em;
+margin-top:1em;
+background-color: rgba(219, 244, 124, 0.5);
+-webkit-transition: background-color 0.5s ease-out;  
+-moz-transition: background-color 0.5s ease-out;  
+-o-transition: background-color 0.5s ease-out;  
+transition: background-color 0.5s ease-out;  
+
+-webkit-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+-moz-box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+box-shadow: 4px 4px 5px 0px rgba(145,199,113,1);
+outline:none;
+border: none;
+}
+
+@media (min-width: 768px){
+    #gridGrapes{
+        margin: 0px 2.5em 0px;
+    }
+
+    .grapes img{
+        height: 320px;
+    }
+    .contentGrapes{
+        font-size:1.3em;
+    }
+    
+  }
+  @media (min-width: 1024px){
+    #gridGrapes{
+    grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
+    margin:0 4em 0;
+    }
+  }
+  @media (min-width: 1025px){
+    .contentGrapes{
+        font-size:0.7em;
+    }
+  }
+  

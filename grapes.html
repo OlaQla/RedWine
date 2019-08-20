@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Wine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="site">
+    <!----------------------------age verify overlay----------------->
+    <div id="ageVerifyOverlay" style="display:none">
+        <!------------person below 18 years old comunicat---->
+        <div class="tooYoung" style="display:none">
+            Sorry, you're too young to visit this site. Pleas come back in:
+        </div>
+        <div class="wrapAgeVerify">
+            <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
+                    birth:</span>
+            </p>
+            <!----------------- day of birth selector------------------->
+
+            <div class="daySelector">
+                <select class=" btn day">
+                    <option value="0">Select day:</option>
+                </select>
+
+                <select class=" btn month">
+                    <option value="0">Select month:</option>
+                </select>
+
+                <select class=" btn year">
+                    <option value="0">Select year:</option>
+                </select>
+
+            </div>
+
+            <!--- wrong input comunicat-->
+            <div class="wrongInput" style="display: none">Please enter your day of birth DD/MM/YYYY
+            </div>
+
+            <!-- submite button-->
+            <div class="submitWrap">
+                <input type="submit" value="Confirm" class="submit btn">
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------Home page----------------->
+    <div id="main-container">
+        <div id="main">
+            <header id="header" class="page-header">
+                <div class="title">
+                    <h1> Red Wine</i></h1>
+                </div>
+                <nav class="menu" id="main-menu">
+                    <button class="menu-toggle" id="toggle-menu">toggle button</button>
+
+                    <div class="menu-dropdown">
+                        <ul class="nav-menu">
+                            <li class="menuitem"><a href="#" class="dropdownLink"><span>Home</span></a></li>
+                            <li class="menuitem"><a href="#" class="dropdownLink"><span>Types of wine</span></a>
+                            </li>
+                            <li class="menuitem"><a href="#" class="dropdownLink"><span>Pick a wine </span> </a>
+                            </li>
+                            <li class="menuitem"><a href="#" class="dropdownLink"><span>Statistics</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="grape-section">
+                <p class="varieties">Grapes Varieties</p>
+                <div id="gridGrapes">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Cabernet Franc</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/cabernet-franc.jpg" alt="Cabernet Franc Grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin"> Cabernet Franc is believed to have been established in the
+                                    Libournais region of southwest France sometime in the 17th century, when Cardinal
+                                    Richelieu transported cuttings of the vine to the Loire Valley. They were planted at
+                                    the Abbey of Bourgueil under the care of an abbot named Breton, whose name became
+                                    associated with the grape. By the 18th century, plantings of Cabernet Franc (known
+                                    as Bouchet) were found throughout Fronsac, Pomerol and St-Emilion, making quality
+                                    wines. As Cabernet Sauvignon grew more popular in the 18th and 19th centuries, the
+                                    close similarity of the two grapes was observed and theories emerged as to the
+                                    extent of their relationship. In 1997, DNA evidence emerged to show that Cabernet
+                                    Franc had crossed with Sauvignon blanc to produce Cabernet Sauvignon<span
+                                        id="dots">...</span><span id="more">
+                                        </br> In
+                                        general,
+                                        Cabernet Franc is very similar to Cabernet Sauvignon, but buds and ripens at
+                                        least a
+                                        week earlier. This trait allows the vine to thrive in slightly cooler climates
+                                        than
+                                        Cabernet Sauvignon, such as the Loire Valley. In Bordeaux, plantings of Cabernet
+                                        Franc are treated as an "insurance policy" against inclement weather close to
+                                        harvest that may damage plantings of Cabernet Sauvignon. Its early budding does
+                                        pose
+                                        the viticultural hazard of coulure early in the growing season. The vine is
+                                        vigorous and upright, with dark-green, 5-lobed leaves. The winged bunches are
+                                        elongated and small-medium in size. The berries are quite small and blue-black
+                                        in
+                                        color, with fairly thin skins.The Cabernet Franc grapevine is more prone to
+                                        mutation than Cabernet Sauvignon, less so than Pinot noir. </br> Across the
+                                        world Cabernet Franc is one of the twenty most widely planted grape varieties.
+                                        Plantings are found throughout Europe, in the New World,
+                                        China and Kazakhstan. In many regions, it is planted as a component of a
+                                        Bordeaux-style blend such as Meritage, playing secondary role to Cabernet
+                                        Sauvignon
+                                        and Merlot. In parts of northeast Italy, Anjou-Saumur, Touraine and the right
+                                        bank
+                                        region of Bordeaux, Cabernet Franc both plays a more prominent role in blends
+                                        and is
+                                        vinted as a varietal.</span></p>
+                                <button onclick="myFunction()" id="myBtn">Read more</button>
+                                <p class="pTasting">Cabernet Franc might be described as the grntly side of Cabernet
+                                    Sauvignon. It is subtly fragrant and gently flirtatious rather than massively
+                                    muscular and tough in youth. </br> Cabernet Franc is medium-bodied red wine whose
+                                    origins likely lie in the Basque country of France. The wine is loved for its
+                                    savory, bell pepper-like flavors, medium-high acidity and mouthwatering taste. It is
+                                    an ideal food pairing wine. You can find single-varietal Cabernet Franc wines, but
+                                    the variety is also quite popular as blending grape in the famous Bordeaux Blend.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Cabernet Sauvignon</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/cabernet-savignon.jpg" alt="Cabernet Sauvignon Grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">For many years, the origin of Cabernet Sauvignon was not clearly
+                                    understood and many myths and conjectures surrounded it. The word "Sauvignon" is
+                                    believed to be derived from the French sauvage meaning "wild" and to refer to the
+                                    grape being a wild Vitis vinifera vine native to France. Until recently the grape
+                                    was rumored to have ancient origins, perhaps even being the Biturica grape used to
+                                    make ancient Roman wine and referenced by Pliny the Elder. This belief was widely
+                                    held in the 18th century, when the grape was also known as Petite Vidure or Bidure,
+                                    apparently a corruption of Biturica. There was also belief that Vidure was a
+                                    reference to the hard wood (French vigne dure) of the vine, with a possible
+                                    relationship to Carménère which was once known as Grand Vidure.Another theory
+                                    was that the grapevine originated in the Rioja region of Spain<span
+                                        id="dots">...</span><span id="more"></br>
+
+                                        While the period when the name Cabernet Sauvignon became more prevalent over
+                                        Petite
+                                        Vidure is not certain, records indicate that the grape was a popular Bordeaux
+                                        planting in the 18th century Médoc region. The first estates known to have
+                                        actively
+                                        grown the variety (and the likely source of Cabernet vines for other estates)
+                                        were
+                                        Château Mouton and Château d'Armailhac in Pauillac. </br>
+
+                                        The grape's true origins were discovered in 1996 with the use of DNA typing at
+                                        the
+                                        UC Davis Department of Viticulture and Enology, by a team led by Dr. Carole
+                                        Meredith. The DNA evidence determined that Cabernet Sauvignon was the offspring
+                                        of
+                                        Cabernet franc and Sauvignon blanc and was most likely a chance crossing that
+                                        occurred in the 17th century. Prior to this discovery, this origin had been
+                                        suspected from the similarity of the grapes' names and the fact that Cabernet
+                                        Sauvignon shares similar aromas with both grapes—such as the blackcurrant and
+                                        pencil
+                                        box aromas of Cabernet franc and the grassiness of Sauvignon blanc. In 2016
+                                        scientists at the UC Davis announced they had sequenced a draft of the whole
+                                        genome
+                                        of the Cabernet Sauvignon grape, the first genome of a commercial wine-producing
+                                        grape to be sequenced.</span></p>
+                                <button onclick="myFunction()" id="myBtn">Read more</button>
+                                <p class="pTasting">Cabs are decidedly dry in style and range from medium-bodied to
+                                    full-bodied. They are characterized by higher tannins, which serve to provide
+                                    structure and complexity while supporting the rich dark fruit characteristics. The
+                                    most common aromatic and flavor components found in Cabernet Sauvignon are plum,
+                                    black cherry, blackberry, blueberry, warm spice, vanilla, black pepper, tobacco and
+                                    sometimes leather aromas and or flavors.</br>
+
+                                    Thanks to the tighter tannins in Cabernet Sauvignon, this wine is built for fat and
+                                    protein. Red meat, in particular, is its first love. Everything from burgers and
+                                    brats to prime rib and grilled game, hearty, sausage dishes, lamb and
+                                    strong-flavored cheese (think Stilton, cheddar, Gruyere) all find their mark with a
+                                    Cab. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Merlot</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/merlot.jpg" alt="Merlot wine Grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">The earliest recorded mention of Merlot
+                                    was in the notes of a local Bordeaux official who in 1784 labeled wine made from the
+                                    grape in the Libournais region as one of the area's best. In 1824, the word Merlot
+                                    itself appeared in an article on Médoc wine where it was described that the grape
+                                    was named after the local black bird who liked eating the ripe grapes on the vine.
+                                    Other
+                                    descriptions of the grape from the 19th century called the variety lou seme doù
+                                    flube ("the seedling from the river") with the grape thought to have
+                                    originated on one of the islands found along the Garonne river.</br>
+
+                                    By the 19th century it was being regularly planted in the Médoc on the "Left Bank"
+                                    of the Gironde. After a series of setbacks that includes a severe frost in 1956
+                                    and several vintages in the 1960s lost to rot, French authorities in Bordeaux banned
+                                    new plantings of Merlot vines between 1970 and 1975.</b>
+
+                                    It was first recorded in Italy around Venice under the synonym Bordò in 1855. The
+                                    grape was introduced to the Swiss, from Bordeaux, sometime in the 19th century and
+                                    was recorded in the Swiss canton of Ticino between 1905 and 1910. In the 1990s,
+                                    Merlot saw an upswing of popularity in the United States. Red wine consumption, in
+                                    general, increased in the US following the airing of the 60 Minutes report on the
+                                    French Paradox and the potential health benefits of wine and, possibly, the chemical
+                                    resveratrol. The popularity of Merlot stemmed in part from the relative ease in
+                                    pronouncing the name of the wine as well as its softer, fruity
+                                    profile that made it more approachable to some wine drinkers.<br>
+                                    Merlot is one of the world's most widely planted grape variety with plantings of the
+                                    vine outpacing even the more well-known Cabernet Sauvignon in many regions,
+                                    including the grape's homeland of France. Here, France is home to nearly two
+                                    thirds of the world's total plantings of Merlot. Beyond France it is also grown
+                                    in Italy (where it is the country's 5th most planted grape), Algeria,California,
+                                    Romania, Australia, Argentina, Bulgaria, Canada, Chile, Greece, New Zealand, South
+                                    Africa, Switzerland, Croatia, Hungary, Montenegro, Slovenia, Mexico and other parts
+                                    of the United States such as Washington, Virginia and Long Island. It grows in many
+                                    regions that also grow Cabernet Sauvignon but tends to be cultivated in the cooler
+                                    portions of those areas. In areas that are too warm, Merlot will ripen too
+                                    early.</br>
+
+                                    In places like Israel, Merlot is the second most widely planted grape variety after
+                                    Cabernet Sauvignon with 1,000 hectares in cultivation, making very
+                                    "New World-style" wines. The grape can also be found in Turkey with 429 hectares
+                                    in 2010 as well as Malta and Cyprus.
+                                </p>
+                                <p class="pTasting">Merlot tends to have a similar flavor profile to Cabernet Sauvignon
+                                    and is actually within the same family of grape. The main difference between these
+                                    grapes is that Merlot has a thinner skin and tends
+                                    to be less astringent due to fewer and softer tannins.</br>
+
+                                    Merlot is famously a smooth, velvety wine and it is often the texture of Merlot that
+                                    is commented upon, rather than taste. The grape can produce soft, medium or
+                                    full-bodied wines. As is often the case, the wines vary greatly depending on the
+                                    climate in which the Merlot grape is cultivated.
+
+                                    With plummy and chocolatey notes, it is an easy-drinking red and often recommended
+                                    for red wine beginners.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Malbec</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/malbec.jpg" alt="Melbec wine grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">
+                                    Malbec is a purple grape variety used in making red wine. The
+                                    grapes tend to have an inky dark color and robust tannins, and are known as one of
+                                    the six grapes allowed in the blend of red Bordeaux wine. The French plantations of
+                                    Malbec are now found primarily in Cahors in South West France. It is increasingly
+                                    celebrated as an Argentine varietal wine and is being grown around the world.</br>
+
+                                    Called Malbec in Bordeaux, Auxerrois or Côte Noir in Cahors, and Pressac in other
+                                    places, the grape became less popular in Bordeaux after 1956 when frost killed off
+                                    75% of the crop. Despite Cahors being hit by the same frost, which devastated the
+                                    vineyards, Malbec was replanted and continued to be popular in that area where it
+                                    was mixed with Merlot and Tannat to make dark, full-bodied wines, and more recently
+                                    has been made into 100% Malbec varietal wines.</br>
+
+                                    The Malbec grape is a thick-skinned grape and needs more sun and heat than either
+                                    Cabernet Sauvignon or Merlot to mature. It ripens mid-season and can bring very
+                                    deep color, ample tannin, and a particular plum-like flavor component to add
+                                    complexity to claret blends. Sometimes, especially in its traditional growing
+                                    regions, it is not trellised and cultivated as bush vines. Here
+                                    it is sometimes kept to a relatively low yield of about 6 tons per hectare. The
+                                    wines are rich, dark and juicy.</br>
+
+                                    As a varietal, Malbec creates a rather inky red (or violet), intense wine, so it is
+                                    also commonly used in blends, such as with Merlot and Cabernet Sauvignon to create
+                                    the red French Bordeaux claret blend. The grape is blended with Cabernet Franc and
+                                    Gamay in some regions such as the Loire Valley. Other wine regions use the grape
+                                    to produce Bordeaux-style blends.The varietal is sensitive to frost and has a
+                                    proclivity to shatter or coulure.</br>
+                                    Malbec is the dominant red varietal in Cahors where the Appellation Controlée
+                                    regulations for Cahors require a minimum content of 70%. Introduced to Argentina
+                                    by French agricultural engineer Michel Pouget in 1868, Malbec is widely planted in
+                                    Argentina producing a softer, less tannic-driven variety than the wines of Cahors.
+                                    There were once 50,000 hectares planted with Malbec in Argentina; now there are
+                                    25,000 hectares in Mendoza in addition to production in La Rioja, Salta, San Juan,
+                                    Catamarca and Buenos Aires. Chile has about 6,000 hectares planted, France 5,300
+                                    hectares and in the cooler regions of California just 45 hectares. In California the
+                                    grape is used to make Meritage. Malbec is also grown in Washington State, the
+                                    Rogue and Umpqua regions of Oregon, the Grand Valley AVA of Colorado, Australia, New
+                                    Zealand, South Africa, Brazil, British Columbia, the Long Island AVA of New York,
+                                    Oregon, southern Bolivia, northeastern Italy and recently in Texas and southern
+                                    Ontario, Virginia, and in the Baja California region of Mexico.
+
+                                </p>
+                                <p class="pTasting">Malbec is a full-bodied, deep inky coloured wine with relatively
+                                    high alcohol content. Watch out for the magenta rim left in the wine glass with
+                                    Malbec wines. Aromas of dark berries are commonly associated with Malbec – dark
+                                    cherries, plums or blueberries are predictable.</br>
+
+                                    Note that there is a marked difference in taste between Old World and New World
+                                    produced Malbecs. Argentinian (New World) wines evoke the fruity flavours mentioned
+                                    above, while Old World Malbec is often described as leathery, with a more savoury
+                                    edge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Nebbiolo</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/Nebbiolo.png" alt="Nebbio wine grapes Grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">Nebbiolo is an Italian red wine grape variety predominantly
+                                    associated
+                                    with its native Piedmont region, where it makes the Denominazione di Origine
+                                    Controllata e Garantita wines of Barolo, Barbaresco, Roero, Gattinara, Carema
+                                    and Ghemme. Nebbiolo is thought to derive its name from the Italian nebbia or
+                                    Piedmontese nebia, meaning "fog". During harvest, which generally takes place late
+                                    in October, a deep, intense fog sets into the Langhe region where many Nebbiolo
+                                    vineyards are located. Alternative explanations refers to the fog-like gloucous veil
+                                    that forms over the berries as they reach maturity, or that perhaps the name is
+                                    derived instead from the Italian word nobile.</p>
+                                <p class="pTasting">Nebbiolo produces lightly-colored red wines which can be highly
+                                    tannic in youth with scents of tar and roses. As they age, the wines take on a
+                                    characteristic brick-orange hue at the rim of the glass and mature to reveal other
+                                    aromas and flavors such as violets, tar, wild herbs, cherries, raspberries,
+                                    truffles, tobacco, and prunes. Nebbiolo wines can require years of aging to balance
+                                    the tannins with other characteristics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Pinot Noir</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/pinotnoir.jpg" alt="Pinot Noir wine Grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">Pinot noir's home is France's Burgundy region, particularly in
+                                    Côte-d'Or. It is also planted in Argentina, Australia, Austria, Bulgaria, Canada,
+                                    Chile, northern parts of Croatia, Czech Republic, the Republic of Georgia, Germany,
+                                    Greece, Israel, Italy, Hungary, Kosovo, the Republic of Macedonia, Moldova, New
+                                    Zealand, Romania, Serbia, Slovakia, Slovenia, South Africa, Switzerland, Ukraine,
+                                    United States and Uruguay. The United States has increasingly become a major Pinot
+                                    noir producer, with some of the best regarded coming from the Willamette Valley in
+                                    Oregon and California's Sonoma County with its Russian River Valley and Sonoma Coast
+                                    appellations. Lesser known appellations can be found in Mendocino County's Anderson
+                                    Valley, as well as the Central Coast's Santa Lucia Highlands appellation, the Santa
+                                    Maria Valley and Sta. Rita Hills American Viticulture Area in Santa Barbara County.
+                                    In New Zealand, it is principally grown in Martinborough, Marlborough, Waipara and
+                                    Central Otago.</br>
+
+                                    The leaves of pinot noir are generally smaller than those of Cabernet Sauvignon or
+                                    Syrah. The pinot vine is typically less vigorous than either of these varieties. The
+                                    grape cluster is small and conico-cylindrical; shaped like a pine cone. Some
+                                    viticultural historians believe this shape similarity may have given rise to the
+                                    name. In the vineyard Pinot noir is sensitive to wind and frost, cropping levels,
+                                    soil types and pruning
+                                    techniques. In the winery it is sensitive to fermentation methods, yeast strains and
+                                    is highly reflective of its terroir with different regions producing very different
+                                    wines. Its thin skin makes it susceptible to bunch rot and similar fungal diseases.
+                                    The vines themselves are susceptible to powdery mildew, especially in Burgundy
+                                    infection by leaf roll and fanleaf viruses causes significant vine health problems.
+                                    </br>
+
+                                    However, Pinot noir wines are among the most popular in the world. Joel Fleischman
+                                    of Vanity Fair describes pinot noir as "the most romantic of wines, with so
+                                    voluptuous a perfume, so sweet an edge, and so powerful a punch that, like falling
+                                    in love, they make the blood run hot and the soul wax embarrassingly poetic."
+                                    Master Sommelier Madeline Triffon calls Pinot "sex in a glass".</p>
+                                <p class="pTasting">The tremendously broad range of bouquets, flavors, textures and
+                                    impressions that Pinot noir can produce sometimes confuses tasters. In the
+                                    broadest terms, the wine tends to be of light to medium body with an aroma
+                                    reminiscent of black and/or red cherry, raspberry and to a lesser extent currant and
+                                    many other fine small red and black berry fruits. Traditional red Burgundy is famous
+                                    for its savory fleshiness and "farmyard" aromas, but changing fashions, modern
+                                    winemaking
+                                    techniques, and new easier-to-grow clones have favored a lighter, more
+                                    fruit-prominent, cleaner style.</br>
+
+                                    The wine's color when young is often compared to that of garnet, frequently being
+                                    much lighter than that of other red wines. This is entirely natural and not a
+                                    winemaking fault as Pinot noir has a lower skin anthocyanin
+                                    content than most other classical red/black varieties. </br>
+
+                                    However, an emerging, increasingly evident, style from California and New Zealand
+                                    highlights a more powerful, fruit forward and darker wine that can tend toward Syrah
+                                    (or even new world Malbec) in depth, extract, and alcoholic content.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Pinotage</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/pinotage.jpg" alt="Pinotage wine grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">Pinotage is a grape variety that was created in South Africa in 1925
+                                    by Abraham Izak Perold, the first Professor of Viticulture at Stellenbosch
+                                    University. Perold was attempting to combine the best qualities of the robust
+                                    Hermitage with Pinot noir, a grape that makes great wine but can be difficult to
+                                    grow. The first wine was made in 1941 at Elsenburg, with the
+                                    first commercial plantings at Myrtle Grove near Sir Lowry's Pass.
+                                    The first recognition came when a Bellevue wine made from Pinotage became the
+                                    champion wine at the Cape Wine Show of 1959. This wine would become the first wine
+                                    to mention Pinotage on its label in 1961, when Stellenbosch Farmer's Winery
+                                    marketed it under their Lanzerac brand.This early success, and its easy
+                                    viticulture, prompted a wave of planting during the 1960s.<br>
+                                    In addition to South Africa, Pinotage is also grown in Brazil, Canada, Israel, New
+                                    Zealand, United States and Zimbabwe. In New Zealand, there are 94 acres (38 ha) of
+                                    Pinotage. In the US, there are plantings in Arizona, California, Michigan, Oregon
+                                    and Virginia. German winemakers have recently begun experimenting with the
+                                    grape.</p>
+                                <p class="pTasting">Pinotage is a dense wine, with strong colours and bold flavours. As
+                                    a single varietal, the wine is distinctive. It has notes of cherry, plum, tobacco
+                                    and tar and can be quite bitter. Young Pinotage wines are often more palatable and
+                                    easier to drink than older varieties.
+
+                                    A word of warning – the volatile nature of Pinotage can mean it occasionally
+                                    develops an unpleasantly acidic taste, similar to acetone. Aim for a high quality
+                                    Pinotage to ensure the taste is perfect.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Shiraz/Syrah</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/shirazz.jpg" alt="Shiraz wine grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin">Syrah also known as Shiraz, is a dark-skinned grape
+                                    variety grown throughout the world and used primarily to produce red wine. In 1999,
+                                    Syrah was found to be the offspring of two obscure grapes from southeastern France,
+                                    Dureza and Mondeuse Blanche.Syrah should not be confused with Petite Sirah, a
+                                    cross of Syrah with Peloursin dating from 1880.</br>
+
+                                    The style and flavor profile of wines made from Syrah is influenced by the climate
+                                    where the grapes are grown with moderate climates tending to produce medium to
+                                    full-bodied wines with medium-plus to high levels of tannins and notes of
+                                    blackberry, mint and black pepper. In hot climates, Syrah is more consistently
+                                    full-bodied with softer tannin, jammier fruit and spice notes of licorice, anise and
+                                    earthy leather. In many regions the acidity and tannin levels of Syrah allow the
+                                    wines produced to have favorable aging potential.</br>
+
+                                    Syrah is used as a single varietal or as a blend. Following several years of strong
+                                    planting, Syrah was estimated in 2004 to be the world's 7th most grown grape at
+                                    352,000 acres. It can be found throughout the globe from
+                                    France to New World wine regions such as: Chile, South Africa, the Hawke's Bay,
+                                    Waiheke, New Zealand, California and Washington. It can also be found in several
+                                    Australian wine regions such as: Barossa, Heathcote, Coonawarra, Hunter Valley,
+                                    Margaret River and McLaren Vale.</p>
+                                <p class="pTasting">Syrah/Shiraz wines are rich, spicy, intensely flavoured and dark in colour. The wines are full-bodied and dry. French Syrah tends to border on smoky, herby and is higher in acidity. New World style Shiraz wines from Australia and USA tend to be richer, softer with notes of chocolate or occasionally leather.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Grenache</div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/Grenache.jpg" alt="Grenache wine grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin"></p>
+                                <p class="pTasting"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="grapes titleGrapes"> Zinfandel </div>
+                            <div class="grapes imageGrapes">
+                                <img src="/img/Zinfandel.jpg" alt="Zinfandel wine grapes">
+                            </div>
+                            <div class="grapes">
+                                <button class="bntGrapes origin">Origin</button>
+                                <button class="bntGrapes tasting">Tasting Notes</button>
+                            </div>
+                            <div class="grapes contentGrapes">
+                                <p class="pOrigin"></p>
+                                <p class="pTasting"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------- aside social media bars----------------->
+
+                <ul class="ct-socials">
+                    <li>
+                        <a href="/" target="_blank"><i class="fa fa-twitter aside-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="/" target="_blank"><i class="fa fa-facebook aside-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="/" target="_blank"><i class="fa fa-youtube aside-youtube"></i></a>
+                    </li>
+
+                </ul>
+            </section>
+
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="clearfix">
+
+            <div class="section-media">
+
+                <!-------------------- links to social media  ---------------------->
+
+                <ul class="social-links flex-con">
+
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-facebook facebook-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-twitter twitter-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-instagram insta-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-youtube youtube-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/hamburgerMenu.js"></script>
+    <script type="text/javascript" src="js/ageVerify.js"></script>
+    <script type="text/javascript" src="js/showMoreButton.js"></script>
+</body>
+
+</html>

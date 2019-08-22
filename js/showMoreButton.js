@@ -14,5 +14,13 @@ $(document).ready(function(){
           parentCard.find(".contentGrapes p").filter(":not(.pTasting)").hide();
           parentCard.find(".pTasting").toggle("slow");
      });
+
+     $(".mapOverlay").hide();
+     $(".bntMap").click(function(){
+          $(".mapOverlay").show();
+     })
+     $("#x").click(function(){
+          $(".mapOverlay").hide();
+     })
 });
 

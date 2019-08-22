@@ -88,6 +88,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin"> Cabernet Franc is believed to have been established in the
@@ -147,6 +148,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">For many years, the origin of Cabernet Sauvignon was not clearly
@@ -210,6 +212,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">The earliest recorded mention of Merlot
@@ -277,6 +280,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">
@@ -343,6 +347,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Nebbiolo is an Italian red wine grape variety predominantly
@@ -373,6 +378,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Pinot noir's home is France's Burgundy region, particularly in
@@ -437,6 +443,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Pinotage is a grape variety that was created in South Africa in 1925
@@ -475,6 +482,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Syrah also known as Shiraz, is a dark-skinned grape
@@ -514,6 +522,7 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Would it surprise you to know that Grenache is responsible for some
@@ -567,6 +576,8 @@
                             <div class="grapes">
                                 <button class="bntGrapes origin">Origin</button>
                                 <button class="bntGrapes tasting">Tasting Notes</button>
+                                <button class="bntMap">
+                                    View map</button>
                             </div>
                             <div class="grapes contentGrapes">
                                 <p class="pOrigin">Zinfandel (also known as Primitivo) is a variety of black-skinned
@@ -602,7 +613,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="nothingFound" style="display:none">Nothing was found</div>
+                <div class="nothingFound" style="display:none">
+                    <p><span>Whoops!</span> </br>Sorry, but nothing matched your search. Please try some different keywords.</p>
+                </div>
+                <div class="mapOverlay">
+                        <button id = "x">X</button>
+                    <div id="map"></div>
+                </div>
+
                 <!---------------------- aside social media bars----------------->
 
                 <ul class="ct-socials">
@@ -660,6 +678,12 @@
     <script type="text/javascript" src="js/ageVerify.js"></script>
     <script type="text/javascript" src="js/showMoreButton.js"></script>
     <script type="text/javascript" src="js/serchField.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByS_o1nGNpryWjlGZ90lZtqVb3J1Osll4&callback=initMap"
+        async defer></script>
 </body>
 
 </html>

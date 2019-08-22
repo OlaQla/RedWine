@@ -16,11 +16,26 @@ $(document).ready(function(){
      });
 
      $(".mapOverlay").hide();
-     $(".bntMap").click(function(){
-          $(".mapOverlay").show();
+     
+     $(".bntMap").first().click(function(){
+          initMap(0, 0, locations = [
+               {lat: -1, lng: -1},
+               {lat: 1, lng: 1},
+           
+          ]);
+          $(".mapOverlay").show("medium");
      })
+     
+     $(".bntMap").eq(1).click(function(){
+          initMap(52, 21, locations = [
+               {lat: 52, lng: 21},
+               {lat: 53, lng: 22}, 
+          ]);
+          $(".mapOverlay").show("medium");
+     })
+     
      $("#x").click(function(){
-          $(".mapOverlay").hide();
+          $(".mapOverlay").hide("medium");
      })
 });
 

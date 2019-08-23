@@ -222,7 +222,7 @@ h1 {
   height: 4em;
   text-align: left;
   padding: 0;
-  border-bottom: 1px solid $text;
+  border-bottom: 0.9px solid $text;
   background-color: $plum;
 }
 
@@ -260,18 +260,14 @@ h1 {
     display: block;
     position: static;
   }
-}
 
-@media (min-width: 768px) {
   .nav-menu {
     display: flex;
     border: 0;
     padding: 0;
     margin: 0;
   }
-}
 
-@media (min-width: 768px) {
   .menuitem {
     flex: 1;
     background-color: transparent;
@@ -283,8 +279,7 @@ h1 {
       padding: 0;
     }
   }
-}
-@media (min-width: 768px) {
+
   .dropdownLink {
     color: #fff;
     text-transform: uppercase;
@@ -306,6 +301,10 @@ h1 {
       width: 0;
     }
 
+}
+
+@media (min-width: 768px) {
+ 
     :hover:after {
       width: 100%;
       left: 0;
@@ -363,7 +362,7 @@ h1 {
   transform: scale(1.2);
 }
 
-/*-------------------------------------HomePage------*/
+/*-------------------------------------------------HomePage------*/
 
 .home-section {
   height: calc(100vh - 7.2em);
@@ -548,7 +547,7 @@ h1 {
 
 .grape-section {
   input {
-    margin: 0 0 2em 3em;
+    margin: 0 0 2em 3.5em;
     width: 20em;
     height: 3em;
     border-radius: 0.5em;
@@ -703,8 +702,35 @@ h1 {
   }
 }
 
+@media (max-width: 767px){
+  .mapOverlay {
+    left: 50%;
+    margin-left: -13em;
+    top: 50%;
+    margin-top: -19em;
+    height: 30em;
+    width: 25em;
+  }
+  #map{
+      width: 23em;
+      height: 27em;
+      margin:1em 1em;
+      border: 1px solid $grey;
+  }
 
-@media (min-width: 768px) {
+  #gridGrapes {
+    margin: 0px 0.5em 0px;
+  }
+
+  .bntMap {
+    width: 8em;
+  }
+
+  .bntGrapes {
+    width: 8em;
+  }
+}
+@media (min-width: 768px)and (max-width: 1024px) {
   #gridGrapes {
     margin: 0px 2.5em 0px;
   }
@@ -722,13 +748,37 @@ h1 {
   .varieties {
     font-size: 2.5em;
   }
+
+  .mapOverlay {
+    left: 50%;
+    margin-left: -20em;
+    top: 50%;
+    margin-top: -16em;
+    height: 40em;
+    width: 40em;
+  }
+  #map{
+      width: 38em;
+      height: 38em;
+      margin:1em 1em;
+      border: 1px solid $grey;
+  }
 }
-@media (min-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   #gridGrapes {
     grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
     margin-left: 5em;
     margin-right: 5em;
   }
+
+  .grape-section {
+    input {
+      margin: 0 0 2em 8em;
+      width: 20em;
+      height: 4em;
+    }
+  }
+}
   @media (min-width: 1025px) {
     .contentGrapes {
       font-size: 0.7em;
@@ -739,10 +789,19 @@ h1 {
     }
     #gridGrapes {
       grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-      margin: 0 1em 0;
+      margin: 0 3em 0;
+    }
+
+    .grape-section {
+      input {
+        margin: 0 0 2em 5em;
+      }
     }
     .titleGrapes {
       font-size: 1em;
     }
+    .grapes img {
+      height: 320px;
+    }
   }
-}
+

@@ -81,13 +81,16 @@ html {
   padding: 1em;
   background-color: #193d39;
   color: #fafafa;
-  opacity: 1;
+  border: 1px solid #867d37;
+  outline: none;
 }
 
-#ageVerifyOverlay .submit:hover {
-  background-color: #fafafa;
-  opacity: 0.7;
-  color: black;
+@media (min-width: 1025px) {
+  #ageVerifyOverlay .submit:hover {
+    background-color: #fafafa;
+    opacity: 0.7;
+    color: black;
+  }
 }
 
 #ageVerifyOverlay .wrongInput {
@@ -106,6 +109,11 @@ html {
   margin-top: 30%;
   margin-left: 10%;
   margin-right: 10%;
+  line-height: 2em;
+}
+
+#ageVerifyOverlay .tooYoung span {
+  font-size: 1em;
 }
 
 @media (min-width: 1025px) {

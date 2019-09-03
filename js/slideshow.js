@@ -26,5 +26,5 @@ $(document).ready(function() {
     }
     
     
-    setTimeout(moveSlide, 10000)
+    setTimeout(moveSlide, 5000)
 });

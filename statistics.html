@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Wine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="site">
+    <!----------------------------age verify overlay----------------->
+    <div id="ageVerifyOverlay" style="display: none">
+        <!------------person below 18 years old comunicat---->
+        <div class="tooYoung" style="display:none" >
+            Sorry, you're too young to visit this site. </br>Please come back in: <span class="daysTo18"></span> days.
+        </div>
+        <div class="wrapAgeVerify"  >
+            <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
+                    birth:</span>
+            </p>
+            <!----------------- day of birth selector------------------->
+
+            <div class="daySelector">
+                <select class=" btn day">
+                    <option value="0">Select day:</option>
+                </select>
+
+                <select class=" btn month">
+                    <option value="12">Select month:</option>
+                </select>
+
+                <select class=" btn year">
+                    <option value="0">Select year:</option>
+                </select>
+
+            </div>
+
+            <!--- wrong input comunicat-->
+            <div class="wrongInput" style="display: none">Please enter your day of birth DD/MM/YYYY
+            </div>
+
+            <!-- submite button-->
+            <div class="submitWrap">
+                <input type="submit" value="Confirm" class="submit btn">
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------Statistics section----------------->
+    <div id="main-container">
+        <div id="main">
+
+            <!-------------------------Main Menu---------------------->
+            <header id="header" class="page-header">
+                <div class="title">
+                    <h1> Red Wine</i></h1>
+                </div>
+                <nav class="menu" id="main-menu">
+                    <button class="menu-toggle" id="toggle-menu">toggle button</button>
+
+                    <div class="menu-dropdown">
+                        <ul class="nav-menu">
+                            <li class="menuitem"><a href="index.html" class="dropdownLink"><span>Home</span></a></li>
+                            <li class="menuitem"><a href="grapes.html" class="dropdownLink"><span>Types of wine</span></a>
+                            </li>
+                            <li class="menuitem"><a href="#" class="dropdownLink"><span>Pick a wine </span> </a>
+                            </li>
+                            <li class="menuitem"><a href="statistics.html" class="dropdownLink"><span>Statistics</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-----------------charts---------------------------->
+            <section class="statistics-section clearfix">
+               <div id="chart"></div>
+            </section>
+
+        </div>
+    </div>
+    <!---------------------------------------footer--------->
+    <footer id="footer">
+        <div class="clearfix">
+
+            <div class="section-media">
+
+                <!-------------------- links to social media  ---------------------->
+
+                <ul class="social-links flex-con">
+
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-facebook facebook-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-twitter twitter-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-instagram insta-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-youtube youtube-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!---------------------------scripts ------------------------>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="js/hamburgerMenu.js"></script>
+    <script type="text/javascript" src="js/ageVerify.js"></script>
+    <script src="//d3plus.org/js/d3.js"></script>
+    <script src="//d3plus.org/js/d3plus.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+
+
+</body>
+
+</html>

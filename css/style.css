@@ -797,14 +797,145 @@ h1 {
 
 /*----------------------------------------Statistics----------------------*/
 .statistics-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   height: 100%;
-  padding-bottom: 3em;
-  background-color: #E9EAEA;
+  background-color: rgba(154, 141, 127, 0.2);
 }
 
-#chart {
-  padding: 2em;
-  width: 40em;
-  height: 20em;
+.statistics-section .buttonsStat {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 2em 3em;
+  width: 100%;
+  height: auto;
+  background-color: rgba(154, 141, 127, 0.2);
+}
+
+.statistics-section .buttonsStat .btnwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.statistics-section .buttonsStat .btnwrap .btnStat {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0.4em;
+  width: 15em;
+  height: 4em;
+  border: none;
+  border-radius: 0.3em;
+  outline: none;
+  -webkit-box-shadow: 4px 4px 8px 2px #9a8d7f;
+  box-shadow: 4px 4px 8px 2px #9a8d7f;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.statistics-section .buttonsStat .btnStat:hover {
+  opacity: 0.8;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.statistics-section .buttonsStat .a {
+  background-color: #4c3f54;
+}
+
+.statistics-section .buttonsStat .b {
+  background-color: #d13535;
+}
+
+.statistics-section .buttonsStat .c {
+  background-color: #f2c057;
+}
+
+.statistics-section .buttonsStat .d {
+  background-color: #486824;
+}
+
+.statistics-section .buttonsStat .e {
+  background-color: #e94f08;
+}
+
+.statistics-section .graph {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  width: 100%;
+  height: auto;
+  background-color: rgba(154, 141, 127, 0.2);
+  padding: 1em;
+}
+
+.statistics-section .graph #chart {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 320px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    width: 8em;
+    height: 1.6em;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    width: 8em;
+    height: 3em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    width: 8em;
+    height: 5em;
+  }
+}
+
+@media (min-width: 1026px) {
+  .buttonsStat {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .graph {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    width: 100%;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

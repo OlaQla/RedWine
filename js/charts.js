@@ -16,7 +16,7 @@ d3.csv("/data/wine_production.csv", function (error, data) {
     .id("Continent")
     .text("Continent")
     .attrs(attributes)
-    .legend({"size":45})
+    .legend({"size":40})
     .y("Value")
     .x("Year")
     .color("hex")

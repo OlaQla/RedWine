@@ -15,10 +15,10 @@
     <!----------------------------age verify overlay----------------->
     <div id="ageVerifyOverlay" style="display: none">
         <!------------person below 18 years old comunicat---->
-        <div class="tooYoung" style="display:none" >
+        <div class="tooYoung" style="display:none">
             Sorry, you're too young to visit this site. </br>Please come back in: <span class="daysTo18"></span> days.
         </div>
-        <div class="wrapAgeVerify"  >
+        <div class="wrapAgeVerify">
             <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
                     birth:</span>
             </p>
@@ -65,18 +65,41 @@
                     <div class="menu-dropdown">
                         <ul class="nav-menu">
                             <li class="menuitem"><a href="index.html" class="dropdownLink"><span>Home</span></a></li>
-                            <li class="menuitem"><a href="grapes.html" class="dropdownLink"><span>Types of wine</span></a>
+                            <li class="menuitem"><a href="grapes.html" class="dropdownLink"><span>Types of
+                                        wine</span></a>
                             </li>
                             <li class="menuitem"><a href="#" class="dropdownLink"><span>Pick a wine </span> </a>
                             </li>
-                            <li class="menuitem"><a href="statistics.html" class="dropdownLink"><span>Statistics</span></a></li>
+                            <li class="menuitem"><a href="statistics.html"
+                                    class="dropdownLink"><span>Statistics</span></a></li>
                         </ul>
                     </div>
                 </nav>
             </header>
             <!-----------------charts---------------------------->
-            <section class="statistics-section clearfix">
-               <div id="chart"></div>
+            <section class="home-section clearfix">
+                <div class="statistics-section">
+                    <div class="buttonsStat">
+                        <div class="btnwrap">
+                            <button class="btnStat a">1</button>
+                        </div>
+                        <div class="btnwrap">
+                            <button class="btnStat b">2</button>
+                        </div>
+                        <div class="btnwrap">
+                            <button class="btnStat c">3</button>
+                        </div>
+                        <div class="btnwrap">
+                            <button class="btnStat d">4</button>
+                        </div>
+                        <div class="btnwrap">
+                            <button class="btnStat e">5</button>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div id="chart"></div>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -120,7 +143,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="js/hamburgerMenu.js"></script>
     <script type="text/javascript" src="js/ageVerify.js"></script>
     <script src="//d3plus.org/js/d3.js"></script>

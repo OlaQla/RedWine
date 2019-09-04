@@ -884,6 +884,21 @@ h1 {
   height: 100%;
 }
 
+.statistics-section .graph #export {
+  width: 100%;
+  height: 100%;
+}
+
+.statistics-section .graph #import {
+  width: 100%;
+  height: 100%;
+}
+
+.statistics-section .graph #consumption {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 320px) {
   .statistics-section {
     -webkit-box-orient: vertical;

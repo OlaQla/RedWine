@@ -1,15 +1,23 @@
 
 d3.csv("/data/wine_production.csv", function (error, data) {
     loadedData = data.map(d => { return { "Continent": d["Continent"], "Year": d["Year"], "Value": d["Value"] / 1000 }; });
-    
-    var attributes = [
+    new d3plus.LinePlot()
+    .config({
+        data: loadedData,
+        groupBy: "Continent"
+    })
+    .x("Year")
+    .y("Value")
+    .select("#chart")
+    .render()
+    /*var attributes = [
         {"Continent": "Europe", "hex": "#E5E500"},
         {"Continent": "Africa", "hex": "#00cc00"},
         {"Continent": "Oceania", "hex": "#0000cc"},
         {"Continent": "Asia", "hex": "#00cccc"},
         {"Continent": "America", "hex": "cccc00"},
-    ]
-    var visualisation = d3plus.viz()
+    ]*/
+   /* var visualisation = d3plus.viz()
     .container("#chart")
     .data(loadedData)
     .type("line")
@@ -21,6 +29,6 @@ d3.csv("/data/wine_production.csv", function (error, data) {
     .x("Year")
     .color("hex")
     .title("Wine production per continent (Years: 1995-2017)")
-    .draw();
+    .draw();*/
 
 });

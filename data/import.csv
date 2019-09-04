@@ -1,0 +1,58 @@
+﻿Continent,Country,Series,Year,Unit,Value
+America,Argentina,"Wine imports",2015,"1000 hL",5
+America,Argentina,"Wine imports",2016,"1000 hL",93
+America,Argentina,"Wine imports",2017,"1000 hL",810
+Europe,Austria,"Wine imports",2015,"1000 hL",736
+Europe,Austria,"Wine imports",2016,"1000 hL",824
+Europe,Austria,"Wine imports",2017,"1000 hL",867
+Europe,Bulgaria,"Wine imports",2015,"1000 hL",80
+Europe,Bulgaria,"Wine imports",2016,"1000 hL",73
+Europe,Bulgaria,"Wine imports",2017,"1000 hL",120
+America,Canada,"Wine imports",2015,"1000 hL",4134
+America,Canada,"Wine imports",2016,"1000 hL",4157
+America,Canada,"Wine imports",2017,"1000 hL",4187
+America,Chile,"Wine imports",2015,"1000 hL",25
+America,Chile,"Wine imports",2016,"1000 hL",25
+America,Chile,"Wine imports",2017,"1000 hL",15
+Europe,Croatia,"Wine imports",2015,"1000 hL",290
+Europe,Croatia,"Wine imports",2016,"1000 hL",310
+Europe,Croatia,"Wine imports",2017,"1000 hL",269
+Europe,France,"Wine imports",2015,"1000 hL",7598
+Europe,France,"Wine imports",2016,"1000 hL",7750
+Europe,France,"Wine imports",2017,"1000 hL",7307
+Europe,Greece,"Wine imports",2015,"1000 hL",125
+Europe,Greece,"Wine imports",2016,"1000 hL",165
+Europe,Greece,"Wine imports",2017,"1000 hL",122
+Europe,Ireland,"Wine imports",2015,"1000 hL",767
+Europe,Ireland,"Wine imports",2016,"1000 hL",848
+Europe,Ireland,"Wine imports",2017,"1000 hL",835
+Europe,Italy,"Wine imports",2015,"1000 hL",2854
+Europe,Italy,"Wine imports",2016,"1000 hL",1706
+Europe,Italy,"Wine imports",2017,"1000 hL",2076
+Europe,Malta,"Wine imports",2015,"1000 hL",59
+Europe,Malta,"Wine imports",2016,"1000 hL",66
+Europe,Malta,"Wine imports",2017,"1000 hL",65
+Oceania,"New Zealand","Wine imports",2015,"1000 hL",345
+Oceania,"New Zealand","Wine imports",2016,"1000 hL",372
+Oceania,"New Zealand","Wine imports",2017,"1000 hL",399
+Europe,Poland,"Wine imports",2015,"1000 hL",1092
+Europe,Poland,"Wine imports",2016,"1000 hL",1177
+Europe,Poland,"Wine imports",2017,"1000 hL",1284
+Europe,Portugal,"Wine imports",2015,"1000 hL",2161
+Europe,Portugal,"Wine imports",2016,"1000 hL",1804
+Europe,Portugal,"Wine imports",2017,"1000 hL",2164
+Africa,"South Africa","Wine imports",2015,"1000 hL",158
+Africa,"South Africa","Wine imports",2016,"1000 hL",169
+Africa,"South Africa","Wine imports",2017,"1000 hL",169
+Europe,Spain,"Wine imports",2015,"1000 hL",467
+Europe,Spain,"Wine imports",2016,"1000 hL",614
+Europe,Spain,"Wine imports",2017,"1000 hL",557
+Europe,"United Kingdom","Wine imports",2015,"1000 hL",13600
+Europe,"United Kingdom","Wine imports",2016,"1000 hL",13555
+Europe,"United Kingdom","Wine imports",2017,"1000 hL",13277
+America,"United States","Wine imports",2015,"1000 hL",11036
+America,"United States","Wine imports",2016,"1000 hL",11143
+America,"United States","Wine imports",2017,"1000 hL",12089
+World,World,"Wine imports",2015,"1000 hL",104703
+World,World,"Wine imports",2016,"1000 hL",104027
+World,World,"Wine imports",2017,"1000 hL",109461

@@ -8,6 +8,7 @@ d3.csv("/data/wine_production.csv", function (error, data) {
     })
     .x("Year")
     .y("Value")
+    .title("Wine Production per Continent 1995-2017")
     .select("#chart")
     .render()
     /*var attributes = [

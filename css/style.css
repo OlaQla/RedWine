@@ -825,6 +825,10 @@ h1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #fafafa;
   margin: 0.4em;
   width: 15em;
   height: 4em;
@@ -869,6 +873,10 @@ h1 {
   background-color: #e94f08;
 }
 
+.statistics-section .buttonsStat .f {
+  background-color: #523634;
+}
+
 .statistics-section .graph {
   -webkit-box-flex: 3;
       -ms-flex: 3;
@@ -899,42 +907,123 @@ h1 {
   height: 100%;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .statistics-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    width: 8em;
-    height: 1.6em;
+  .statistics-section .buttonsStat {
+    padding: 0.7em 0.2em;
+    margin: 0;
   }
-}
-
-@media (min-width: 321px) and (max-width: 767px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .statistics-section .buttonsStat .btnwrap {
+    padding-left: 0.1em;
+    text-align: center;
+    display: inline-block;
   }
   .statistics-section .buttonsStat .btnwrap .btnStat {
-    width: 8em;
-    height: 3em;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    width: 8em;
+    font-size: 0.6em;
+    float: left;
+    width: 12em;
     height: 5em;
+  }
+}
+
+@media (min-width: 322px) and (max-width: 399px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat {
+    padding: 0.7em 0.4em;
+    margin: 0;
+  }
+  .statistics-section .buttonsStat .btnwrap {
+    padding-left: 0.3em;
+    text-align: center;
+    display: inline-block;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    font-size: 0.6em;
+    float: left;
+    width: 13em;
+    height: 5em;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 765px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat {
+    padding: 1.7em 1.9em;
+    margin: 0;
+  }
+  .statistics-section .buttonsStat .btnwrap {
+    padding-left: 0.5em;
+    text-align: center;
+    display: inline-block;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    font-size: 0.6em;
+    float: left;
+    width: 12em;
+    height: 7em;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 1024px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat {
+    padding: 1.7em 1.9em;
+    margin: 0;
+  }
+  .statistics-section .buttonsStat .btnwrap {
+    padding-left: 0.5em;
+    text-align: center;
+    display: inline-block;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    font-size: 0.6em;
+    float: left;
+    width: 20em;
+    height: 10em;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 1024px) {
+  .statistics-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics-section .buttonsStat {
+    padding: 1.7em 1.9em;
+    margin: 0;
+  }
+  .statistics-section .buttonsStat .btnwrap {
+    padding-left: 0.5em;
+    text-align: center;
+    display: inline-block;
+  }
+  .statistics-section .buttonsStat .btnwrap .btnStat {
+    font-size: 0.7em;
+    float: left;
+    width: 20em;
+    height: 10em;
   }
 }
 

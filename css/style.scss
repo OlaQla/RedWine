@@ -811,54 +811,52 @@ h1 {
 }
 
 /*----------------------------------------Statistics----------------------*/
+
 .statistics-section {
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: $statisticsBackground;
+  padding: 2em 0 2em 0;
 
-  .buttonsStat {
-    flex: 1;
-    padding: 2em 3em;
-    width: 100%;
-    height: auto;
+  .graph {
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(23em, 1fr));
+    grid-auto-rows: auto auto;
+    grid-gap: 1.5em;
+    grid-auto-flow: dense;
+    margin: 0px 1em 0px;
+  }
+
+  .graph > * {
     background-color: $statisticsBackground;
-    .btnwrap {
-      display: flex;
+    color: $grey;
+    -webkit-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+    -moz-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+    box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 0.5em;
+  }
 
-      .btnStat {
-        flex: 1;
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 2px;
-        color: $text;
-        margin: 0.4em;
-        width: 15em;
-        height: 4em;
-        border: none;
-        border-radius: 0.3em;
-        outline: none;
-        -webkit-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
-        -moz-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
-        box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
-        opacity: 1;
-        -webkit-transition: opacity 0.2s;
-        -moz-transition: opacity 0.2s;
-        -ms-transition: opacity 0.2s;
-        -o-transition: opacity 0.2s;
-        transition: opacity 0.2s;
-        -webkit-transition: transform 0.5s;
-        -moz-transition: transform 0.5s;
-        -ms-transition: transform 0.5s;
-        -o-transition: transform 0.5s;
-        transition: transform 0.5s;
-      }
+  .gWrap {
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+    width: 100%;
+    padding:0;
+    .graphTitle{
+      font-size:0.8em;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      color:$text;
+      padding-bottom:0.5em;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      width:100%;
+      height: 4em;
+      margin-bottom:0.5em;
     }
 
-    .btnStat:hover {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
     .a {
       background-color: #4c3f54;
     }
@@ -878,14 +876,6 @@ h1 {
     .f {
       background-color: #523634;
     }
-  }
-  .graph {
-    flex: 3;
-    width: 100%;
-    height: auto;
-    background-color: $statisticsBackground;
-    padding: 1em;
-
     #chart {
       width: 100%;
       height: 100%;
@@ -905,119 +895,10 @@ h1 {
       width: 100%;
       height: 100%;
     }
-  }
-}
-@media (max-width: 321px) {
-  .statistics-section {
-    flex-direction: column;
-    .buttonsStat {
-      padding: 0.7em 0.2em;
-      margin: 0;
-      .btnwrap {
-        padding-left: 0.1em;
-        text-align: center;
-        display: inline-block;
-        .btnStat {
-          font-size: 0.6em;
-          float: left;
-          width: 12em;
-          height: 5em;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 322px) and (max-width:399px){
-  .statistics-section {
-    flex-direction: column;
-    .buttonsStat {
-      padding: 0.7em 0.4em;
-      margin: 0;
-      .btnwrap {
-        padding-left: 0.3em;
-        text-align: center;
-        display: inline-block;
-        .btnStat {
-          font-size: 0.6em;
-          float: left;
-          width: 13em;
-          height: 5em;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 400px) and (max-width: 765px) {
-  .statistics-section {
-    flex-direction: column;
-    .buttonsStat {
-      padding: 1.7em 1.9em;
-      margin: 0;
-      .btnwrap {
-        padding-left: 0.5em;
-        text-align: center;
-        display: inline-block;
 
-        .btnStat {
-          font-size: 0.6em;
-          float: left;
-          width: 12em;
-          height: 7em;
-        }
-      }
+    #consumptionPerCapita {
+      width: 100%;
+      height: 100%;
     }
-  }
-}
-@media (min-width: 766px) and (max-width: 1024px){
-  .statistics-section {
-    flex-direction: column;
-    .buttonsStat {
-      padding: 1.7em 1.9em;
-      margin: 0;
-      .btnwrap {
-        padding-left: 0.5em;
-        text-align: center;
-        display: inline-block;
-
-        .btnStat {
-          font-size: 0.6em;
-          float: left;
-          width: 20em;
-          height: 10em;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 770px) and (max-width: 1024px) {
-  .statistics-section {
-    flex-direction: column;
-    .buttonsStat {
-      padding: 1.7em 1.9em;
-      margin: 0;
-      .btnwrap {
-        padding-left: 0.5em;
-        text-align: center;
-        display: inline-block;
-
-        .btnStat {
-          font-size: 0.7em;
-          float: left;
-          width: 20em;
-          height: 10em;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 1026px) {
-  .buttonsStat {
-    flex-direction: column;
-  }
-  .graph {
-    flex: 3;
-    width: 100%;
-    height: auto;
   }
 }

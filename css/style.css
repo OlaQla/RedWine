@@ -797,249 +797,105 @@ h1 {
 
 /*----------------------------------------Statistics----------------------*/
 .statistics-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(154, 141, 127, 0.2);
-}
-
-.statistics-section .buttonsStat {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 2em 3em;
-  width: 100%;
-  height: auto;
-  background-color: rgba(154, 141, 127, 0.2);
-}
-
-.statistics-section .buttonsStat .btnwrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.statistics-section .buttonsStat .btnwrap .btnStat {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #fafafa;
-  margin: 0.4em;
-  width: 15em;
-  height: 4em;
-  border: none;
-  border-radius: 0.3em;
-  outline: none;
-  -webkit-box-shadow: 4px 4px 8px 2px #9a8d7f;
-  box-shadow: 4px 4px 8px 2px #9a8d7f;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  -webkit-transition: transform 0.5s;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-.statistics-section .buttonsStat .btnStat:hover {
-  opacity: 0.8;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.statistics-section .buttonsStat .a {
-  background-color: #4c3f54;
-}
-
-.statistics-section .buttonsStat .b {
-  background-color: #d13535;
-}
-
-.statistics-section .buttonsStat .c {
-  background-color: #f2c057;
-}
-
-.statistics-section .buttonsStat .d {
-  background-color: #486824;
-}
-
-.statistics-section .buttonsStat .e {
-  background-color: #e94f08;
-}
-
-.statistics-section .buttonsStat .f {
-  background-color: #523634;
+  padding: 2em 0 2em 0;
 }
 
 .statistics-section .graph {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  width: 100%;
-  height: auto;
+  max-width: 1330px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(23em, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(23em, 1fr));
+  grid-auto-rows: auto auto;
+  grid-gap: 1.5em;
+  grid-auto-flow: dense;
+  margin: 0px 1em 0px;
+}
+
+.statistics-section .graph > * {
   background-color: rgba(154, 141, 127, 0.2);
-  padding: 1em;
+  color: #282d2f;
+  -webkit-box-shadow: 4px 4px 8px 2px #9a8d7f;
+  box-shadow: 4px 4px 8px 2px #9a8d7f;
+  padding: 0 0.5em 0 0.5em;
+  border-radius: 0.5em;
 }
 
-.statistics-section .graph #chart {
+.statistics-section .gWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20em;
+  width: 100%;
+  padding: 0;
+}
+
+.statistics-section .gWrap .graphTitle {
+  font-size: 0.8em;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fafafa;
+  padding-bottom: 0.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  width: 100%;
+  height: 4em;
+  margin-bottom: 0.5em;
+}
+
+.statistics-section .gWrap .a {
+  background-color: #4c3f54;
+}
+
+.statistics-section .gWrap .b {
+  background-color: #d13535;
+}
+
+.statistics-section .gWrap .c {
+  background-color: #f2c057;
+}
+
+.statistics-section .gWrap .d {
+  background-color: #486824;
+}
+
+.statistics-section .gWrap .e {
+  background-color: #e94f08;
+}
+
+.statistics-section .gWrap .f {
+  background-color: #523634;
+}
+
+.statistics-section .gWrap #chart {
   width: 100%;
   height: 100%;
 }
 
-.statistics-section .graph #export {
+.statistics-section .gWrap #export {
   width: 100%;
   height: 100%;
 }
 
-.statistics-section .graph #import {
+.statistics-section .gWrap #import {
   width: 100%;
   height: 100%;
 }
 
-.statistics-section .graph #consumption {
+.statistics-section .gWrap #consumption {
   width: 100%;
   height: 100%;
 }
 
-@media (max-width: 321px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat {
-    padding: 0.7em 0.2em;
-    margin: 0;
-  }
-  .statistics-section .buttonsStat .btnwrap {
-    padding-left: 0.1em;
-    text-align: center;
-    display: inline-block;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    font-size: 0.6em;
-    float: left;
-    width: 12em;
-    height: 5em;
-  }
-}
-
-@media (min-width: 322px) and (max-width: 399px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat {
-    padding: 0.7em 0.4em;
-    margin: 0;
-  }
-  .statistics-section .buttonsStat .btnwrap {
-    padding-left: 0.3em;
-    text-align: center;
-    display: inline-block;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    font-size: 0.6em;
-    float: left;
-    width: 13em;
-    height: 5em;
-  }
-}
-
-@media (min-width: 400px) and (max-width: 765px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat {
-    padding: 1.7em 1.9em;
-    margin: 0;
-  }
-  .statistics-section .buttonsStat .btnwrap {
-    padding-left: 0.5em;
-    text-align: center;
-    display: inline-block;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    font-size: 0.6em;
-    float: left;
-    width: 12em;
-    height: 7em;
-  }
-}
-
-@media (min-width: 766px) and (max-width: 1024px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat {
-    padding: 1.7em 1.9em;
-    margin: 0;
-  }
-  .statistics-section .buttonsStat .btnwrap {
-    padding-left: 0.5em;
-    text-align: center;
-    display: inline-block;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    font-size: 0.6em;
-    float: left;
-    width: 20em;
-    height: 10em;
-  }
-}
-
-@media (min-width: 770px) and (max-width: 1024px) {
-  .statistics-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .statistics-section .buttonsStat {
-    padding: 1.7em 1.9em;
-    margin: 0;
-  }
-  .statistics-section .buttonsStat .btnwrap {
-    padding-left: 0.5em;
-    text-align: center;
-    display: inline-block;
-  }
-  .statistics-section .buttonsStat .btnwrap .btnStat {
-    font-size: 0.7em;
-    float: left;
-    width: 20em;
-    height: 10em;
-  }
-}
-
-@media (min-width: 1026px) {
-  .buttonsStat {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .graph {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
-    width: 100%;
-    height: auto;
-  }
+.statistics-section .gWrap #consumptionPerCapita {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

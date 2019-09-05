@@ -12,8 +12,6 @@ d3.csv("/data/import.csv", function (error, data) {
       time: "Year",
       legend: false
     })
-    
-    .title("Wine Import 2015-2017")
     .yDomain([0, 25000])
     .select("#import")
     .render();

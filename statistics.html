@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css" />
     <link type="text/css" href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body class="site">
@@ -77,33 +78,34 @@
                 </nav>
             </header>
             <!-----------------charts---------------------------->
-            <section class="home-section clearfix">
+            <section class="clearfix">
                 <div class="statistics-section">
-                    <div class="buttonsStat">
-                        <div class="btnwrap">
-                            <button class="btnStat a">Wine Production per Continent</button>
-                        </div>
-                        <div class="btnwrap">
-                            <button class="btnStat b">Wine Consumption per Country</button>
-                        </div>
-                        <div class="btnwrap">
-                            <button class="btnStat c">Wine Export</button>
-                        </div>
-                        <div class="btnwrap">
-                            <button class="btnStat d">Wine Import</button>
-                        </div>
-                        <div class="btnwrap">
-                            <button class="btnStat e">5</button>
-                        </div>
-                        <div class="btnwrap">
-                                <button class="btnStat f">6</button>
-                            </div>
-                    </div>
+
                     <div class="graph">
-                        <div id="chart"></div>
-                        <div id="consumption" style="display: none"></div>
-                        <div id="export" style="display: none"></div>
-                        <div id="import" style="display: none"></div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle a">Wine Production per Continent 1995-2017</h1>
+                            <div id="chart"></div>
+                        </div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle b">Wine Consumption per Country in 2017</h1>
+                            <div id="consumption"></div>
+                        </div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle c">Wine Consumption per Capita per Country in 2017</h1>
+                            <div id="consumptionPerCapita"></div>
+                        </div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle d">Wine Export 2015-2017</h1>
+                            <div id="export"></div>
+                        </div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle e">Wine Import 2015-2017</h1>
+                            <div id="import"></div>
+                        </div>
+                        <div class="gWrap">
+                            <h1 class="graphTitle f">xxxx</h1>
+                            <div id="area"></div>
+                        </div>
 
                     </div>
                 </div>
@@ -161,9 +163,9 @@
     <script type="text/javascript" src="js/exportGraph.js"></script>
     <script type="text/javascript" src="js/importGraph.js"></script>
     <script type="text/javascript" src="js/consumptionGraph.js"></script>
+    <script type="text/javascript" src="js/consumptionPerCapita.js"></script>
 
-
-
+    </script>
 </body>
 
 </html>

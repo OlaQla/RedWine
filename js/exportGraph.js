@@ -1,9 +1,9 @@
 d3.csv("/data/export.csv", function (error, data) {
-    loadedData = data.map(d => { return { "Country": d["Country"], "Year": d["Year"], "Value": d["Value"]}; });
-    
-    console.log(JSON.stringify(loadedData[0]));
+  loadedData = data.map(d => { return { "Country": d["Country"], "Year": d["Year"], "Value": d["Value"] }; });
 
-    new d3plus.BarChart()
+  console.log(JSON.stringify(loadedData[0]));
+
+  new d3plus.BarChart()
     .config({
       data: loadedData,
       groupBy: "Country",
@@ -12,8 +12,7 @@ d3.csv("/data/export.csv", function (error, data) {
       time: "Year",
       legend: false
     })
-    .title("Wine Export 2015-2017")
-    .yDomain([0,25000])
+    .yDomain([0, 25000])
     .select("#export")
     .render();
 });

@@ -1,4 +1,4 @@
-d3.csv("/data/consumptionPerCapita.csv", function (error, data) {
+d3.csv("../data/consumptionPerCapita.csv", function (error, data) {
     loadedData = data.map(d => { return { "Country": d["Country"], "Year": d["Year"], "Value": d["Value"] }; });
 
 

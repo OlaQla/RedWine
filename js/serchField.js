@@ -15,7 +15,7 @@ $("#myInput").keyup(function () {
 
   // Set display none to all filtered cards
   nonMatchingCards.hide();
-
+  // if there are no search results show info 
   if (nonMatchingCards.length === allCards.length) {
     $(".nothingFound").show();
   } else {

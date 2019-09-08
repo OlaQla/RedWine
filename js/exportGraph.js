@@ -1,7 +1,6 @@
 d3.csv("data/export.csv", function (error, data) {
+   // pick from data fields for chart (Year -> Value per Country)
   loadedData = data.map(d => { return { "Country": d["Country"], "Year": d["Year"], "Value": d["Value"] }; });
-
-  console.log(JSON.stringify(loadedData[0]));
 
   new d3plus.BarChart()
     .config({

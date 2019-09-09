@@ -15,7 +15,8 @@
 <body class="site">
     <!----------------------------age verify overlay----------------->
     <div id="ageVerifyOverlay" style="display: none">
-        <!------------person below 18 years old comunicat---->
+
+        <!-------------person below 18 years old comunicat------------>
         <div class="tooYoung" style="display:none">
             Sorry, you're too young to visit this site. </br>Please come back in: <span class="daysTo18"></span> days.
         </div>
@@ -23,39 +24,44 @@
             <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
                     birth:</span>
             </p>
-            <!----------------- day of birth selector------------------->
+
+            <!--------------------day of birth selector------------------->
 
             <div class="daySelector">
+                <!--select day button-->
                 <select class=" btn day">
                     <option value="0">Select day:</option>
                 </select>
 
                 <select class=" btn month">
+                    <!--select month button-->
                     <option value="12">Select month:</option>
                 </select>
 
                 <select class=" btn year">
+                    <!--select year button-->
                     <option value="0">Select year:</option>
                 </select>
 
             </div>
 
-            <!--- wrong input comunicat-->
+            <!-------------------- wrong input comunicat----------->
+
             <div class="wrongInput" style="display: none">Please enter your day of birth DD/MM/YYYY
             </div>
 
-            <!-- submite button-->
+            <!-------------------- submite button------------------>
             <div class="submitWrap">
                 <input type="submit" value="Confirm" class="submit btn">
             </div>
         </div>
     </div>
 
-    <!----------------------------------------Statistics section----------------->
+    <!----------------------------------------Statistics section---------------------------->
     <div id="main-container">
         <div id="main">
 
-            <!-------------------------Main Menu---------------------->
+            <!-------------------------Main Menu-------------------------------------------->
             <header id="header" class="page-header">
                 <div class="title">
                     <h1> Red Wine</i></h1>
@@ -63,6 +69,7 @@
                 <nav class="menu" id="main-menu">
                     <button class="menu-toggle" id="toggle-menu">toggle button</button>
 
+                    <!------------------------dropdown/buttons with main sections------------->
                     <div class="menu-dropdown">
                         <ul class="nav-menu">
                             <li class="menuitem"><a href="index.html" class="dropdownLink"><span>Home</span></a></li>
@@ -77,31 +84,43 @@
                     </div>
                 </nav>
             </header>
-            <!-----------------charts---------------------------->
+            <!----------------------Charts Section --------------------------------->
             <section class="clearfix">
                 <div class="statistics-section">
-
+                    <!-----------------Charts / Graphs ------------------------------>
                     <div class="graph">
+
+                        <!-----------------------Wine production per continent chart----------->
                         <div class="gWrap">
                             <h1 class="graphTitle a">Wine Production per Continent 1995-2017</h1>
                             <div id="chart"></div>
                         </div>
+
+                        <!-----------------------Wine Consumption per Country chart----------->
                         <div class="gWrap">
                             <h1 class="graphTitle b">Wine Consumption per Country in 2017</h1>
                             <div id="consumption"></div>
                         </div>
+
+                        <!-----------------------Wine Consumption per Capita perCountry chart---->
                         <div class="gWrap">
                             <h1 class="graphTitle c">Wine Consumption per Capita per Country in 2017</h1>
                             <div id="consumptionPerCapita"></div>
                         </div>
+
+                        <!-----------------------Wine Export per Country chart------------------>
                         <div class="gWrap">
                             <h1 class="graphTitle d">Wine Export 2015-2017</h1>
                             <div id="export"></div>
                         </div>
+
+                        <!-----------------------Wine Import per Country chart------------------>
                         <div class="gWrap">
                             <h1 class="graphTitle e">Wine Import 2015-2017</h1>
                             <div id="import"></div>
                         </div>
+
+                        <!-----------------------Wine -------------- Country chart----------->
                         <div class="gWrap">
                             <h1 class="graphTitle f">xxxx</h1>
                             <div id="area"></div>
@@ -113,7 +132,8 @@
 
         </div>
     </div>
-    <!---------------------------------------footer--------->
+
+    <!--------------------------Footer-------------------------->
     <footer id="footer">
         <div class="clearfix">
 
@@ -148,7 +168,7 @@
         </div>
     </footer>
 
-    <!---------------------------scripts ------------------------>
+    <!---------------------------Scripts ------------------------>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -157,7 +177,6 @@
     <script type="text/javascript" src="js/hamburgerMenu.js"></script>
     <script type="text/javascript" src="js/ageVerify.js"></script>
     <script src="//d3plus.org/js/d3.js"></script>
-    <!----<script src="//d3plus.org/js/d3plus.js"></script>-->
     <script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.22.full.js"></script>
     <script type="text/javascript" src="js/charts.js"></script>
     <script type="text/javascript" src="js/exportGraph.js"></script>

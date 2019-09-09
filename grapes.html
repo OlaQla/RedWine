@@ -12,9 +12,11 @@
 </head>
 
 <body class="site">
-    <!----------------------------age verify overlay----------------->
-    <div id="ageVerifyOverlay" style="display:none">
-        <!------------person below 18 years old comunicat---->
+
+   <!----------------------------age verify overlay----------------->
+   <div id="ageVerifyOverlay" style="display: none">
+
+        <!-------------person below 18 years old comunicat------------>
         <div class="tooYoung" style="display:none">
             Sorry, you're too young to visit this site. </br>Please come back in: <span class="daysTo18"></span> days.
         </div>
@@ -22,33 +24,39 @@
             <p class="verifyAge">You must be over 18 to enter this site.</br><span>Please select your date of
                     birth:</span>
             </p>
-            <!----------------- day of birth selector------------------->
+
+            <!--------------------day of birth selector------------------->
 
             <div class="daySelector">
+                <!--select day button-->
                 <select class=" btn day">
                     <option value="0">Select day:</option>
                 </select>
 
                 <select class=" btn month">
-                    <option value="0">Select month:</option>
+                    <!--select month button-->
+                    <option value="12">Select month:</option>
                 </select>
 
                 <select class=" btn year">
+                    <!--select year button-->
                     <option value="0">Select year:</option>
                 </select>
 
             </div>
 
-            <!--- wrong input comunicat-->
+            <!-------------------- wrong input comunicat----------->
+
             <div class="wrongInput" style="display: none">Please enter your day of birth DD/MM/YYYY
             </div>
 
-            <!-- submite button-->
+            <!-------------------- submite button------------------>
             <div class="submitWrap">
                 <input type="submit" value="Confirm" class="submit btn">
             </div>
         </div>
     </div>
+
 
     <!----------------------------------------Home page----------------->
     <div id="main-container">
@@ -60,6 +68,7 @@
                 <nav class="menu" id="main-menu">
                     <button class="menu-toggle" id="toggle-menu">toggle button</button>
 
+                    <!------------------------dropdown/buttons with main sections------------->
                     <div class="menu-dropdown">
                         <ul class="nav-menu">
                             <li class="menuitem"><a href="index.html" class="dropdownLink"><span>Home</span></a></li>
@@ -72,13 +81,15 @@
                     </div>
                 </nav>
             </header>
-            <!-----------------------------------------Section Grapes-->
+            <!------------------------------Section Grapes------------------>
             <section class="grape-section">
                 <p class="varieties">Grapes Varieties</p>
                 <input id="myInput" type="text" name="search" placeholder="   Search Grape Varieties">
 
-                <!----------------------------Grape Cards Grid-->
+                <!----------------------------Grape Cards Grid------------->
                 <div id="gridGrapes">
+
+                    <!------------------Cabernet Franc card-------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Cabernet Franc</div>
@@ -145,6 +156,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Cabernet Sauvignon card---------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Cabernet Sauvignon</div>
@@ -210,6 +223,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Merlot card---------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Merlot</div>
@@ -279,6 +294,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Melbec card---------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Malbec</div>
@@ -347,6 +364,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Nebbiolo card-------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Nebbiolo</div>
@@ -378,6 +397,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Pinot Noir card------------------>
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Pinot Noir</div>
@@ -443,6 +464,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Pinotage card-------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Pinotage</div>
@@ -484,6 +507,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Shiraz card---------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Shiraz/Syrah</div>
@@ -524,6 +549,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Grenache card-------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Grenache</div>
@@ -579,6 +606,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!------------------Zinfandel card-------------------->
                     <div class="cards">
                         <div class="card">
                             <div class="grapes titleGrapes"> Zinfandel </div>
@@ -626,9 +655,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!----------Feedback for user that serch returned no results-------------->
                 <div class="nothingFound" style="display:none">
                     <p><span>Whoops!</span> </br>Sorry, but nothing matched your search. Please try some different keywords.</p>
                 </div>
+
+                <!--------------Button to close map overlay-------------->
                 <div class="mapOverlay">
                         <button id = "x">X</button>
                     <div id="map"></div>
@@ -652,6 +685,8 @@
 
         </div>
     </div>
+
+    <!---------------------------------Footer-------------------------->
     <footer id="footer">
         <div class="clearfix">
 
@@ -685,6 +720,8 @@
             </div>
         </div>
     </footer>
+
+    <!---------------------------------Scripts-------------------->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>

@@ -945,15 +945,13 @@ h1 {
   .quiz {
     flex: 1;
     margin: 0 auto;
+
     .questions {
-      background-image: url("../img/imgQuiz1.jpg");
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/imgQuiz2.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      filter: brightness(50%);
-      -webkit-filter: brightness(50%);
-      -moz-filter: brightness(50%);
-      -o-filter: brightness(50%);
-      -ms-filter: brightness(50%);
       -webkit-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
       -moz-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
       box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
@@ -962,25 +960,42 @@ h1 {
         text-align: center;
         font-size: 1em;
         font-family: "Roboto", sans-serif;
-        color: white;
-        padding: 1em 0 2em 0;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 1em 0.5em 1em 0.5em;
       }
       .answer {
+        font-size: 0.7em;
+        font-weight: 600;
+        font-family: "Roboto", sans-serif;
+        text-align: left;
         width: 70%;
         height: 3em;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.5);
         margin-left: 2em;
         margin-bottom: 1em;
+        padding-left: 1em;
         border: none;
         outline: none;
       }
-      .score{
-        background-color: #00aced;
+    }
+    .score {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/imgQuiz4.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+      -moz-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+      box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
+
+      p {
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5em;
+        padding: 4em 1em;
       }
     }
-    
   }
- 
 }
 
 @media (max-width: 767px) {

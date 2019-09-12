@@ -15,8 +15,8 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
+html, body {
+  min-height: 100%;
 }
 
 /* ---------------------------------colors */
@@ -160,9 +160,12 @@ $ageVerifyOverlay: linear-gradient(
 
 .site {
   min-height: 100vh;
-  flex-direction: column;
+ 
+
 }
 #main-container {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 2.5em;
 }
 
@@ -329,7 +332,7 @@ h1 {
 
 #footer {
   background-color: $wine;
-  position: relative;
+  position: absolute;
   height: 2.5em;
   margin-top: -2.5em;
   clear: both;
@@ -550,6 +553,7 @@ h1 {
 
 /*-----------------------------------------Grapes page---------------------*/
 .grape-section {
+  flex: 1 0 auto;
   height: 100%;
   padding-bottom: 3em;
   padding-top: 2em;
@@ -568,6 +572,7 @@ h1 {
 .grape-section {
   input {
     margin: 2em 0 2em 3.5em;
+    padding-left:1.5em;
     width: 20em;
     height: 3em;
     border-radius: 0.5em;
@@ -711,7 +716,7 @@ h1 {
 .contentGrapes p {
   font-size: 1.2em;
   text-align: justify;
-  padding: 0.7em;
+  padding: 1em 0.7em 2em;
 }
 
 .nothingFound {
@@ -758,7 +763,13 @@ h1 {
   .bntGrapes {
     width: 8em;
   }
+  .nothingFound {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+  }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   #gridGrapes {
     margin: 0px 2.5em 0px;
@@ -791,6 +802,11 @@ h1 {
     height: 38em;
     margin: 1em 1em;
     border: 1px solid $grey;
+  }
+  .nothingFound {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
   }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -867,7 +883,14 @@ h1 {
     flex-direction: column;
     height: 20em;
     width: 100%;
-    padding: 0;
+    padding: 0em;
+
+    #area{
+    width:100%;
+    height:100%;
+    border: none;
+   
+    }
     .graphTitle {
       font-size: 0.8em;
       font-family: "Roboto", sans-serif;
@@ -949,7 +972,7 @@ h1 {
     .questions {
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/imgQuiz2.jpg");
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/imgQuiz1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       -webkit-box-shadow: 4px 4px 8px 2px rgba(154, 141, 127, 1);
@@ -976,6 +999,14 @@ h1 {
         padding-left: 1em;
         border: none;
         outline: none;
+        -webkit-transition: transform 0.5s;
+        -moz-transition: transform 0.5s;
+        -o-transition: transform 0.5s;
+        transition: transform 0.5s;
+      }
+      .answer:hover {
+        transform: scale(1.03);
+        background-color: rgba(255, 255, 255, 0.7);
       }
     }
     .score {
@@ -995,13 +1026,82 @@ h1 {
         padding: 4em 1em;
       }
     }
+
+    .startAgain {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.7em;
+      color: $text;
+      position: relative;
+      float: right;
+      background: #68a425;
+      opacity: 0.8;
+      color: $text;
+      top: -6em;
+      right: 4em;
+      height: 4em;
+      width: 10em;
+      border-radius: 0.5em;
+      border: none;
+      outline: none;
+      -webkit-transition: transform 0.5s;
+      -moz-transition: transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+    }
+    .startAgain:hover {
+      transform: scale(1.03);
+      opacity: 1;
+    }
   }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 320px) {
   .wrapQuiz {
     width: 90%;
     height: 60%;
+    .quiz {
+      .questions {
+        .question{
+          padding:1em;
+          font-size:1.2em;
+        }
+        .answer{
+          font-size: 0.9em;
+        }
+      }
+      .score {
+        p {
+          font-size: 2em;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .titleQuiz {
+    padding: 3em 0 2em 0;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .wrapQuiz {
+    width: 90%;
+    height: 60%;
+    .quiz {
+      .questions {
+        .question{
+          padding:2em;
+          font-size:1.3em;
+        }
+        .answer{
+          font-size: 0.9em;
+        }
+      }
+      .score {
+        p {
+          font-size: 2em;
+          text-align: center;
+        }
+      }
+    }
   }
   .titleQuiz {
     padding: 3em 0 2em 0;
@@ -1012,6 +1112,23 @@ h1 {
   .wrapQuiz {
     width: 80%;
     height: 60%;
+    .quiz {
+      .questions {
+        .question{
+          padding:2em;
+          font-size:1.7em;
+        }
+        .answer{
+          font-size: 1.1em;
+        }
+      }
+      .score {
+        p {
+          font-size: 2.5em;
+          text-align: center;
+        }
+      }
+    }
   }
   .titleQuiz {
     font-size: 2em;

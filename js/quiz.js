@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var quiz = $(".quiz");
-    var answersButtons = quiz.find(".answer")
+    var answersButtons = quiz.find(".answer");
     var points = 0;
     var questionNumber = 0;
     var questions = [{ question: "1/5 Which would be the best temperature to store red wine?", answers: ["12-14 degrees Celcius", "7-10 degrees Celcius", "20-23 degrees Celcius", "15-18 degrees Celcius"], correctId: 1 },
@@ -14,49 +14,54 @@ $(document).ready(function () {
     var message;
     console.log(JSON.stringify(questions));
 
-    quiz.find(".question").html(questions[questionNumber].question);
+    // fill in questions and answers to html
+
+    quiz.find(".question").html(questions[questionNumber].question); 
     answersButtons.eq(0).html(questions[questionNumber].answers[0]);
     answersButtons.eq(1).html(questions[questionNumber].answers[1]);
     answersButtons.eq(2).html(questions[questionNumber].answers[2]);
     answersButtons.eq(3).html(questions[questionNumber].answers[3]);
 
-    console.log(answersButtons)
+
+    // startAgain button
 
     quiz.find('.startAgain').click(function () {
-        points = 0;
-        questionNumber = 0;
+        points = 0; // set again pionts to 0
+        questionNumber = 0; // set again  questionNumber 0
         
-        quiz.find(".questions").show();
-        quiz.find(".score").hide();
+        quiz.find(".questions").show(); // show questions section
+        quiz.find(".score").hide(); // hide score section
         
+          // fill in questions and answers to html
         quiz.find(".question").html(questions[questionNumber].question);
         answersButtons.eq(0).html(questions[questionNumber].answers[0]);
         answersButtons.eq(1).html(questions[questionNumber].answers[1]);
         answersButtons.eq(2).html(questions[questionNumber].answers[2]);
         answersButtons.eq(3).html(questions[questionNumber].answers[3]);            
-    })
+    });
 
+    // answers buttons - first button 
     answersButtons.eq(0).click(function () {
-        console.log(`Button 0, question number: ${questionNumber}`)
-
+       
+        //  check if this answer is correct 
         if (0 == questions[questionNumber].correctId) {
-            ++points;
+            ++points; // if answer is correct add point
 
-            console.log(points)
         }
-        ++questionNumber;
-        console.log(`Question number: ${questionNumber}`)
-        if (questionNumber == questions.length) {
-            quiz.find(".questions").hide();
-            quiz.find(".score").show();
-            quiz.find(".scoreValue").text(points / 5 * 100);
+        ++questionNumber; // go to next question
+        
+        if (questionNumber == questions.length) { // check if tis question is the last question
+            quiz.find(".questions").hide(); // if yes hide question section
+            quiz.find(".score").show(); // show score section
+            quiz.find(".scoreValue").text(points / 5 * 100); // show points value in %
 
+           // Show message  
             if (points <= 1) {
-                message = tryAgain
+                message = tryAgain;
             } else if (points > 1 && points <= 4) {
-                message = wellDone
+                message = wellDone;
             } else {
-                message = expert
+                message = expert;
             }
             quiz.find('.scoreText').text(message);
 
@@ -67,12 +72,15 @@ $(document).ready(function () {
             answersButtons.eq(2).html(questions[questionNumber].answers[2]);
             answersButtons.eq(3).html(questions[questionNumber].answers[3]);
         }
-    })
+    });
 
+    
+    // answers buttons - second button 
+    
     answersButtons.eq(1).click(function () {
         if (1 == questions[questionNumber].correctId) {
             ++points;
-            console.log(points)
+            console.log(points);
         }
 
         ++questionNumber;
@@ -82,11 +90,11 @@ $(document).ready(function () {
             quiz.find(".scoreValue").text(points / 5 * 100);
 
             if (points <= 1) {
-                message = tryAgain
+                message = tryAgain;
             } else if (points > 1 && points <= 4) {
-                message = wellDone
+                message = wellDone;
             } else {
-                message = expert
+                message = expert;
             }
             quiz.find('.scoreText').text(message);
 
@@ -97,12 +105,14 @@ $(document).ready(function () {
             answersButtons.eq(2).html(questions[questionNumber].answers[2]);
             answersButtons.eq(3).html(questions[questionNumber].answers[3]);
         }
-    })
+    });
+
+    // answers buttons - third button 
 
     answersButtons.eq(2).click(function () {
         if (2 == questions[questionNumber].correctId) {
             ++points;
-            console.log(points)
+            console.log(points);
         }
 
         ++questionNumber;
@@ -112,11 +122,11 @@ $(document).ready(function () {
             quiz.find(".scoreValue").text(points / 5 * 100);
 
             if (points <= 1) {
-                message = tryAgain
+                message = tryAgain;
             } else if (points > 1 && points <= 4) {
-                message = wellDone
+                message = wellDone;
             } else {
-                message = expert
+                message = expert;
             }
             quiz.find('.scoreText').text(message);
 
@@ -127,12 +137,14 @@ $(document).ready(function () {
             answersButtons.eq(2).html(questions[questionNumber].answers[2]);
             answersButtons.eq(3).html(questions[questionNumber].answers[3]);
         }
-    })
+    });
+
+    // answers buttons - fourth button 
 
     answersButtons.eq(3).click(function () {
         if (3 == questions[questionNumber].correctId) {
             ++points;
-            console.log(points)
+            console.log(points);
         }
 
         ++questionNumber;
@@ -142,11 +154,11 @@ $(document).ready(function () {
             quiz.find(".scoreValue").text(points / 5 * 100);
 
             if (points <= 1) {
-                message = tryAgain
+                message = tryAgain;
             } else if (points > 1 && points <= 4) {
-                message = wellDone
+                message = wellDone;
             } else {
-                message = expert
+                message = expert;
             }
             quiz.find('.scoreText').text(message);
 
@@ -157,5 +169,5 @@ $(document).ready(function () {
             answersButtons.eq(2).html(questions[questionNumber].answers[2]);
             answersButtons.eq(3).html(questions[questionNumber].answers[3]);
         }
-    })
-})
+    });
+});

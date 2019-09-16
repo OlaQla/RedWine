@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-	var cookieVal = $.cookie("minDate") // get existing cookie
+	var cookieVal = $.cookie("minDate"); // get existing cookie
 	
 	if (cookieVal) { // check if cookie existed
 		var dateValue = new Date(cookieVal); // create date object from cookie value
@@ -39,7 +39,7 @@ $(document).ready(function () {
 		$.each(months, function (index, value) {
 			var newOption = $(`<option value="${index}">${value}</option>`);
 			monthDropdown.append(newOption);
-		})
+		});
 		// fill in years dropdown	
 		for (var i = 1939; i <= (new Date).getFullYear(); i++) {
 			var newOption = $(`<option value=\"${i}\">${i}</option>`);
@@ -72,6 +72,6 @@ $(document).ready(function () {
 					$(".daysTo18").text(daysTo18);
 				}
 			}
-		})
+		});
 	}
-}) 
+});

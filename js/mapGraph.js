@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $.getJSON("data/countries-110m.json", function(mapData){
+    $.getJSON("data/countries-110m.json", function(mapData){ 
+
         d3.csv("data/totalArea.csv", function(error, areaData){
             const chartData = 
             mapData["objects"]["countries"]["geometries"]
@@ -25,6 +26,6 @@ $(document).ready(function(){
                 tiles: false
             })
             .render()
-        })
-    })
-})
+        });
+    });
+});

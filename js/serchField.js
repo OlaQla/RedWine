@@ -2,7 +2,7 @@ $("#myInput").keyup(function () {
   var currentValue = $(this).val().toLowerCase().trim();
 
   // Get all cards
-  var allCards = $(".cards")
+  var allCards = $(".cards");
 
   // Remove display none from all cards
   allCards.show();
@@ -11,7 +11,7 @@ $("#myInput").keyup(function () {
   var nonMatchingCards = allCards.filter(function () {
     var titleText = $(this).find(".titleGrapes").text().toLowerCase().trim();
     return !titleText.startsWith(currentValue);
-  })
+  });
 
   // Set display none to all filtered cards
   nonMatchingCards.hide();
@@ -21,5 +21,6 @@ $("#myInput").keyup(function () {
   } else {
     $(".nothingFound").hide();
   }
+
 });
 

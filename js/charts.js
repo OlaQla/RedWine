@@ -10,7 +10,7 @@ d3.csv("data/wine_production.csv", function (error, data) {
         .x("Year")
         .y("Value")
         .select("#chart")
-        .render()
+        .render();
   
 });
 });

@@ -573,6 +573,10 @@ h1 {
   margin: 0px 1em 0px;
 }
 
+.singleResult {
+  padding-bottom: 3em;
+}
+
 #gridGrapes > * {
   background-color: #f9f8f8;
   color: #282d2f;
@@ -755,6 +759,9 @@ h1 {
   #gridGrapes {
     margin: 0px 0.5em 0px;
   }
+  .singleResult {
+    padding-bottom: 17em;
+  }
   .bntMap {
     width: 8em;
   }
@@ -771,6 +778,9 @@ h1 {
 @media (min-width: 768px) and (max-width: 1024px) {
   #gridGrapes {
     margin: 0px 2.5em 0px;
+  }
+  .singleResult {
+    padding-bottom: 25em;
   }
   .grapes img {
     height: 320px;

@@ -61,7 +61,7 @@ $(document).ready(function () {
 				var dateValue = new Date(yearValue + 18, monthValue, dayValue);
 				var currentDate = new Date();
 				var isOldEnough = dateValue.getTime() <= currentDate.getTime();
-				$.cookie("minDate", dateValue); // set cookie with calculated maturity date
+				$.cookie("minDate", dateValue, { expires: 365 }); // set cookie with calculated maturity date
 				if (isOldEnough) {
 					$("#ageVerifyOverlay").hide();
 				} else {

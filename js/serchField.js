@@ -18,9 +18,12 @@ $("#myInput").keyup(function () {
   // if there are no search results show info 
   if (nonMatchingCards.length === allCards.length) {
     $(".nothingFound").show();
+    $("#gridGrapes").removeClass("singleResult");
+  } else if(allCards.length - nonMatchingCards.length === 1) {
+    $("#gridGrapes").addClass("singleResult");
   } else {
     $(".nothingFound").hide();
+    $("#gridGrapes").removeClass("singleResult");
   }
 
 });
-

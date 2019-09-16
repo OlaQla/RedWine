@@ -1,3 +1,10 @@
+function loadNextQuestion(questionNumber, questions, answersButtons, quiz) {
+    quiz.find(".question").html(questions[questionNumber].question);
+    answersButtons.each(function(index, button){
+        $(button).html(questions[questionNumber].answers[index]);
+    });
+}
+
 $(document).ready(function () {
     var quiz = $(".quiz");
     var answersButtons = quiz.find(".answer");
@@ -16,158 +23,49 @@ $(document).ready(function () {
 
     // fill in questions and answers to html
 
-    quiz.find(".question").html(questions[questionNumber].question); 
-    answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-    answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-    answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-    answersButtons.eq(3).html(questions[questionNumber].answers[3]);
-
+    loadNextQuestion(questionNumber, questions, answersButtons, quiz);
 
     // startAgain button
 
     quiz.find('.startAgain').click(function () {
         points = 0; // set again pionts to 0
         questionNumber = 0; // set again  questionNumber 0
-        
+
         quiz.find(".questions").show(); // show questions section
         quiz.find(".score").hide(); // hide score section
-        
-          // fill in questions and answers to html
-        quiz.find(".question").html(questions[questionNumber].question);
-        answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-        answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-        answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-        answersButtons.eq(3).html(questions[questionNumber].answers[3]);            
+
+        // fill in questions and answers to html
+        loadNextQuestion(questionNumber, questions, answersButtons, quiz);
     });
 
-    // answers buttons - first button 
-    answersButtons.eq(0).click(function () {
-       
-        //  check if this answer is correct 
-        if (0 == questions[questionNumber].correctId) {
-            ++points; // if answer is correct add point
-
-        }
-        ++questionNumber; // go to next question
-        
-        if (questionNumber == questions.length) { // check if tis question is the last question
-            quiz.find(".questions").hide(); // if yes hide question section
-            quiz.find(".score").show(); // show score section
-            quiz.find(".scoreValue").text(points / 5 * 100); // show points value in %
-
-           // Show message  
-            if (points <= 1) {
-                message = tryAgain;
-            } else if (points > 1 && points <= 4) {
-                message = wellDone;
-            } else {
-                message = expert;
-            }
-            quiz.find('.scoreText').text(message);
-
-        } else {
-            quiz.find(".question").html(questions[questionNumber].question);
-            answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-            answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-            answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-            answersButtons.eq(3).html(questions[questionNumber].answers[3]);
-        }
-    });
-
+    // Initialize answer buttons
+    answersButtons.each(function(index, button){
+        $(button).click(function () {
+            //  check if this answer is correct 
+            if (index == questions[questionNumber].correctId) {
+                ++points; // if answer is correct add point
     
-    // answers buttons - second button 
+            }
+            ++questionNumber; // go to next question
     
-    answersButtons.eq(1).click(function () {
-        if (1 == questions[questionNumber].correctId) {
-            ++points;
-            console.log(points);
-        }
-
-        ++questionNumber;
-        if (questionNumber == questions.length) {
-            quiz.find(".questions").hide();
-            quiz.find(".score").show();
-            quiz.find(".scoreValue").text(points / 5 * 100);
-
-            if (points <= 1) {
-                message = tryAgain;
-            } else if (points > 1 && points <= 4) {
-                message = wellDone;
+            if (questionNumber == questions.length) { // check if tis question is the last question
+                quiz.find(".questions").hide(); // if yes hide question section
+                quiz.find(".score").show(); // show score section
+                quiz.find(".scoreValue").text(points / 5 * 100); // show points value in %
+    
+                // Show message  
+                if (points <= 1) {
+                    message = tryAgain;
+                } else if (points > 1 && points <= 4) {
+                    message = wellDone;
+                } else {
+                    message = expert;
+                }
+                quiz.find('.scoreText').text(message);
+    
             } else {
-                message = expert;
+                loadNextQuestion(questionNumber, questions, answersButtons, quiz);
             }
-            quiz.find('.scoreText').text(message);
-
-        } else {
-            quiz.find(".question").html(questions[questionNumber].question);
-            answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-            answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-            answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-            answersButtons.eq(3).html(questions[questionNumber].answers[3]);
-        }
-    });
-
-    // answers buttons - third button 
-
-    answersButtons.eq(2).click(function () {
-        if (2 == questions[questionNumber].correctId) {
-            ++points;
-            console.log(points);
-        }
-
-        ++questionNumber;
-        if (questionNumber == questions.length) {
-            quiz.find(".questions").hide();
-            quiz.find(".score").show();
-            quiz.find(".scoreValue").text(points / 5 * 100);
-
-            if (points <= 1) {
-                message = tryAgain;
-            } else if (points > 1 && points <= 4) {
-                message = wellDone;
-            } else {
-                message = expert;
-            }
-            quiz.find('.scoreText').text(message);
-
-        } else {
-            quiz.find(".question").html(questions[questionNumber].question);
-            answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-            answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-            answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-            answersButtons.eq(3).html(questions[questionNumber].answers[3]);
-        }
-    });
-
-    // answers buttons - fourth button 
-
-    answersButtons.eq(3).click(function () {
-        if (3 == questions[questionNumber].correctId) {
-            ++points;
-            console.log(points);
-        }
-
-        ++questionNumber;
-        if (questionNumber == questions.length) {
-            quiz.find(".questions").hide();
-            quiz.find(".score").show();
-            quiz.find(".scoreValue").text(points / 5 * 100);
-
-            if (points <= 1) {
-                message = tryAgain;
-            } else if (points > 1 && points <= 4) {
-                message = wellDone;
-            } else {
-                message = expert;
-            }
-            quiz.find('.scoreText').text(message);
-
-        } else {
-            quiz.find(".question").html(questions[questionNumber].question);
-            answersButtons.eq(0).html(questions[questionNumber].answers[0]);
-            answersButtons.eq(1).html(questions[questionNumber].answers[1]);
-            answersButtons.eq(2).html(questions[questionNumber].answers[2]);
-            answersButtons.eq(3).html(questions[questionNumber].answers[3]);
-        }
+        });
     });
 });

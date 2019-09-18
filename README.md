@@ -1,4 +1,5 @@
-# Aleksandra Kula - The story of space 
+# Aleksandra Kula - Red Wine
+
 Code Institute, User - Interactive frontend development 2019
 
 # Project purpose
@@ -27,24 +28,25 @@ Wireframes are available [here](wireframes)
  The main purposes of this website is learning how to implement interactive frontend components with javascript and jQuery while extending my styling skills with SCSS, so 
  every section is built around one or many interactive components and all styles in CSS files are generated from SCSS file that I implemented all in responsive fashion.
 
-## Static component: 
+## Static components: 
 
-### Main menu
+### _Main menu_
 
 Main menu on top of the page is responsive. It is a page-wide stripe of horizontally laid out buttons on bigger screens and turns into a hamburger menu on mobile devices and small screens. 
 In order to provide smoother user experience buttons are animated when the page is loaded and also provide a visual feedback effect by rolling out underscore when hovered over.  
 Each of the menu options opens a subsection covering a specific topic. 
 
-### Footer
+### _Footer_
 
 Footer contains few social media buttons that link to important pages where users can find more up to date information. 
 
-### Side social media panel
+### _Side social media panel_ 
+
 Social media panel is visible only on big screens in middle-left section of the site, to make social media buttons more accessible and compelling than ones in footer. Additional colors and animations made them look crispier and adds a fluid look and feel.
 
-## Interactive components
+## Interactive components:
 
-### Age verification overlay
+### _Age verification overlay_
 
 #### Functionality
 
@@ -55,7 +57,7 @@ Age verification overlay is included in all html files. It's purpose is to perfo
 Component is implemented as a full screen overlay covering site content, using jQuery and a plugin managing browser cookies. 
 When site is opened component checks if it has previously stored cookie with calculated date when access can be grented, if the value is earlier than current date, component doesn't show the overlay, otherwise overlay with calculated number of days till access can be granted is shown. If cookie is not present overlay is shown with dropdowns to pick day, month and year of birth. Dropdowns don't have predefined data but are filled in using javascript. After a date is selected, a cookie is set and the same test as previously is being performed with either showing number of days as a result or granting access to site content. 
 
-### Photo carousel
+### _Photo carousel_
 
 #### Functionality
 
@@ -66,7 +68,7 @@ Photo carousel provides a nice wine-themed gallery of pictures visible in a back
 Carousel is implemented using jQuery only without importing specialized libraries. 
 The main container holds a list of pictures loaded in background with css styles. On interval an animation on 'left' property is started making the container viewport move to next image. To provide an impression of infinite scrolling first image is placed in container twice and when carousel slides to it, the animation is turned off and the viewport is immediately scrolled to the first slide. 
 
-### Grape description text toggle
+### _Grape description text toggle_
 
 #### Functionality
 
@@ -76,7 +78,7 @@ Grape description page consists of multiple cards with grape variety image and a
 
 Text toggle is implemented using jQuery functions to toggle between content types.
 
-### Grape description search
+### _Grape description search_
 
 #### Functionality
 
@@ -86,7 +88,7 @@ To make it easier for users to find information about particular grape variety I
 
 Component is implemented in jQuery by capturing keyUp events from search box. It then captures entered text and filters all the cards that have title fields not starting with exactly the current searchbox value. Component also handles a case when a single result only is displayed to by setting padding (write where) to avoid an effect on footer being pulled to middle of the page on some mobile devices.
 
-### Grape description map
+### _Grape description map_
 
 #### Functionality
 
@@ -96,7 +98,7 @@ Grape description cards provide a popup map with a pin showing where such variet
 
 Component consists of a button making the popup to show up and a function responsible to present data on a map. Component wraps google maps javascript API and uses data about pin location placed in "data" property of each card with grape information.  
 
-### Charts
+### _Charts_
 
 #### Functionality
 
@@ -106,7 +108,7 @@ Charts component presents many interesting information across many years about w
 
 Charts compont presents data downloaded from ... in form of csv files that were preprocessed before importing to a project. Implementation relies on d3plus which wraps d3js library. Before each chart is drawn data is loaded using either jquery ajax call or csv function from d3js. In some of the charts data is rearranged with javascript code before being passed to d3plus. Chart showing world map with growing area is using topojson information for countries geometry and is presented in an iframe because of immature responsivness implementation in alpha (current) version of d3plus. 
 
-### Quiz
+### _Quiz_
 
 #### Functionality
 
@@ -120,19 +122,21 @@ Quiz aggregates user results from each card and presents the aggregated value on
 
 ## Technologies
 
-1. HTML 5 
-   - HTML for document structure
-2. CSS3 (Selectors, Grid, Flex, Floats, Positioning, Transitions, Media Queries) 
-   - CSS for document Styling
-3. JavaScrit
-   - Minimal javascript to open/close hamburger menu
-4. Google Chrome
-   - Used for browsing, testing and a debugging and development tool
+1. HTML 5
+   - Document structure definition 
+2. CSS3 (generated from SCSS using Live Sass Compiler plugin for Visual Studio Code)
+   - Website layout and styling
+3. SCSS 
+   - Template for generating CSS styles 
+4. JavaScrit
+   - Interactive elements implementation, data loading and preprocessing
 5. jQuery
-6. Git used for Version Control
+   - Interactive elements implementation
+6. Git 
+   - Code Version Control
 7. GitHub
    - Repository hosted on GitHub
-8. Github Pages
+8.  Github Pages
    - Website hosted on Github Pages
 9. Am I Responsive
    - Testing responsiveness of the website
@@ -141,13 +145,22 @@ Quiz aggregates user results from each card and presents the aggregated value on
    
 ## Testing 
 
-- Website was tested manually using multiple browsers
+### Automated Testing
+
+The following validation services were used to check the validity of the code:
+
+  - W3C Markup Validation Service was used to validate HTML.
+
+  - W3C CSS validation was used to validate CSS.
+
+  - JSHint was used to validate JavaScript.
+
+### Manual Testing
+
+- Website was tested manually using multiple browsers.
 - Each html file was tested in multiple screen resolution and in mobile device modes, available in browsers developer tools. 
 - All links have been manually tested to ensure that they are pointing to the correct destination. 
 - Checked if all alt attributes are add on any img tag on website and if it describes what’s on it. Screen readers for the blind and visually impaired will read out this text and therefore make image accessible.
-- All pages were tested for HTML validity 
-- All pages were tested for CSS validity
-- jsHint
 
 Browsers used for testing: 
 
@@ -191,28 +204,21 @@ To deploy your own version of the website:
 - Open your chosen IDE (Cloud9, VS Code, etc.)
 - Open a terminal in your code root directory
 - Type 'git clone ' followed by the code taken from github repository
-  (git clone https://github.com/OlaQla/The-Story-Of-Space.git)
+  (git clone https://olaqla.github.io/RedWine/)
 - When this completes you have your own version of the website (You can make any changes to it)
 - The website can be run by opening one of the HTML files in a web browser
 - Saved changes to the website will appear locally after refreshing the page
 
 ## Credits
 
+### Content 
+
+- www.wikipedia.org - content about grape varieties.
+- www.oiv.int  - data for charts and graphs.
+
 ### Media
 
-All the images are linked to images found in google search results.
-The pictures in gallery were downloaded from google result links and scaled down.
-Videos are linked to youtube.
-
-### Acknowledgements
+All the images were found in pixabay.com. The pictures were downloaded from pixabay and scaled down.
 
 
-- https://www.wikipedia.org
-
-* Hosting and deployment
-* Site is made crispier using animations and transitions
-* Documentation - ReadMe File
-* Code is version controlled
-* Manual testing
-* 
 ** Purpose of this project is educational **

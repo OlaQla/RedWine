@@ -137,7 +137,7 @@ Quiz aggregates user results from each card and presents the aggregated value on
 7. GitHub
    - Repository hosted on GitHub
 8.  Github Pages
-   - Website hosted on Github Pages
+    - Website hosted on Github Pages
 9. Am I Responsive
    - Testing responsiveness of the website
 10. Balsamiq Mockups 

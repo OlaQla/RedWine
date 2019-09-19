@@ -972,8 +972,8 @@ h1 {
 .wrapQuiz {
   display: flex;
   width: 50%;
-  height: 80%;
-  margin: auto auto;
+  height: 82%;
+  margin: 0 auto;
 
   .quiz {
     flex: 1;
@@ -994,7 +994,7 @@ h1 {
         font-size: 1em;
         font-family: "Roboto", sans-serif;
         color: rgba(255, 255, 255, 0.7);
-        padding: 1em 0.5em 1em 0.5em;
+        padding: 0.8em 0.5em 0.8em 0.5em;
       }
       .answer {
         font-size: 0.7em;

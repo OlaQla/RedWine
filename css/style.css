@@ -1001,7 +1001,7 @@ h1 {
 
 .wrapQuiz .quiz .questions .question {
   text-align: center;
-  font-size: 1em;
+  font-size: 0.9em;
   font-family: "Roboto", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   padding: 0.8em 0.5em 0.8em 0.5em;

@@ -18,9 +18,9 @@ Wireframes are available [here](wireframes)
 ## UX 
 - In my design of user experience I chose to use color theme reminding of red wine that would be consistent with the main topic of the website:
 
-    - ![#3d191d](https://placehold.it/15/3d191d/000000?text=+) `#3d191d`
+    - ![#3d191d](https://placehold.it/15/3d191d/000000?text=+) `#3d191d ($wine)`
 
-    - ![#3b1d2bf7](https://placehold.it/15/3b1d2bf7/000000?text=+) `#3b1d2bf7`
+    - ![#3b1d2bf7](https://placehold.it/15/3b1d2bf7/000000?text=+) `#3b1d2bf7 ($plum)`
     
 - Roboto font used throughout the website for paragraphs font-family: 'Roboto', sans-serif;
 - Exo font used throughout the website for headings font-family: 'Exo', sans-serif;
@@ -50,7 +50,7 @@ Social media panel is visible only on big screens in middle-left section of the 
 
 #### Functionality
 
-Age verification overlay is included in all html files. It's purpose is to perform viewer age verification based on bith data information provided. Component stores provided information long term to avoid asking verification question multiple times. If user date of birth is validated access to site is granted, otherwise overlay with information how many days exactly need to pass before user can access the site. The number of days is recalculated with every visit and user is always presented with either exact number of days left or the viewing ban is lifted when the 18th birthday date is passed and user is automatically granted access to site content without being asked for the birth date information again.
+Age verification overlay is included in all html files. It's purpose is to perform viewer age verification based on birth data information provided. Component stores provided information long term to avoid asking verification question multiple times. If user date of birth is validated access to site is granted, otherwise overlay with information how many days exactly need to pass before user can access the site. The number of days is recalculated with every visit and user is always presented with either exact number of days left or the viewing ban is lifted when the 18th birthday date is passed and user is automatically granted access to site content without being asked for the birth date information again.
 
 #### Implementation details
 
@@ -66,13 +66,13 @@ Photo carousel provides a nice wine-themed gallery of pictures visible in a back
 #### Implementation details
 
 Carousel is implemented using jQuery only without importing specialized libraries. 
-The main container holds a list of pictures loaded in background with css styles. On interval an animation on 'left' property is started making the container viewport move to next image. To provide an impression of infinite scrolling first image is placed in container twice and when carousel slides to it, the animation is turned off and the viewport is immediately scrolled to the first slide. 
+The main container holds a list of pictures loaded in background with css styles. On interval an animation on 'left' property is started making the container viewport move to next image. To provide an impression of infinite scrolling first image is placed in container twice as a first and last item in carousel, and when carousel slides to it, the animation is turned off and the viewport is immediately scrolled to the first slide. 
 
 ### _Grape description text toggle_
 
 #### Functionality
 
-Grape description page consists of multiple cards with grape variety image and a description of a grape itself and it's origin. To make it possible to put a lot of content in a single page and make it easy to find not both types of content are visible at once but user can at any time go to selected card and press a button which part of content he'd like to see and it will be shown with a fluid transition animations. 
+Grape description page consists of multiple cards, laid out in a grid, with grape variety image and a description of a grape itself and it's origin. To make it possible to put a lot of content in a single page and make it easy to find not both types of content are visible at once but user can at any time go to selected card and press a button which part of content he'd like to see and it will be shown with a fluid transition animations. 
 
 #### Implementation details
 
@@ -86,7 +86,7 @@ To make it easier for users to find information about particular grape variety I
 
 #### Implementation details
 
-Component is implemented in jQuery by capturing keyUp events from search box. It then captures entered text and filters all the cards that have title fields not starting with exactly the current searchbox value. Component also handles a case when a single result only is displayed to by setting padding (write where) to avoid an effect on footer being pulled to middle of the page on some mobile devices.
+Component is implemented in jQuery by capturing keyUp events from search box. It then captures entered text and filters out all the cards that have title fields not starting with exactly the current searchbox value. Component also handles a case when a single result only is displayed to by setting padding (write where) to avoid an effect on footer being pulled to middle of the page on some mobile devices.
 
 ### _Grape description map_
 
@@ -102,11 +102,11 @@ Component consists of a button making the popup to show up and a function respon
 
 #### Functionality
 
-Charts component presents many interesting information across many years about wine production, consumption, import and export ... in form of interactive, easy to read and understand charts. 
+Charts component presents many interesting information across many years about wine production, consumption, import,export and Wineyard surface area in form of interactive, easy to read and understand charts. 
 
 #### Implementation details
 
-Charts compont presents data downloaded from ... in form of csv files that were preprocessed before importing to a project. Implementation relies on d3plus which wraps d3js library. Before each chart is drawn data is loaded using either jquery ajax call or csv function from d3js. In some of the charts data is rearranged with javascript code before being passed to d3plus. Chart showing world map with growing area is using topojson information for countries geometry and is presented in an iframe because of immature responsivness implementation in alpha (current) version of d3plus. 
+Charts compont presents data downloaded from oiv.int in form of csv files that were preprocessed before importing to a project. Implementation relies on d3plus which wraps d3js library. Before each chart is drawn data is loaded using either jquery ajax call or csv function from d3js. In some of the charts data is rearranged with javascript code before being passed to d3plus. Chart showing world map with growing area is using topojson information for countries geometry and is presented in an iframe because of immature responsivness implementation in alpha (current) version of d3plus. 
 
 ### _Quiz_
 

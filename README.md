@@ -1,6 +1,6 @@
 # Aleksandra Kula - Red Wine
 
-Code Institute, User - Interactive frontend development 2019
+Code Institute, Interactive frontend development 2019
 
 # Project purpose
 

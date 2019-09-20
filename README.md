@@ -172,7 +172,7 @@ Browsers used for testing:
 | Mozilla Firefox |
 
 
-Brosers and virtual devices used for responsiveness testing: 
+Virtual devices used for responsiveness testing: 
 
 | Device name    |
 | ------------- |

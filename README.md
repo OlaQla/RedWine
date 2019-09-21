@@ -4,7 +4,10 @@ Code Institute, Interactive frontend development 2019
 
 # Project purpose
 
-Promote knowledge about red wine varieties and grapes amongst adult readers. 
+Promote knowledge about red wine varieties and grapes amongst adult readers. Users are presented with a variety of information in form of text descriptions, geographical information presented on interactive maps as well as statistical information drawn on easy to understand charts. The site also provides a fun and entertaining quiz that helps to validate knowledge. The site is to be used by adults only so the access to the site requires entering the date of birth before granting access to the content. 
+
+As a developer purposes of creating this website is to learn how to implement interactive frontend components with javascript and jQuery while extending my styling skills, so 
+every section is built around one or many interactive components, styled in responsive fashion and all styles in CSS files are generated from SCSS file that I created.
 
 ## Demo 
 
@@ -25,9 +28,7 @@ Wireframes are available [here](wireframes)
 - Roboto font used throughout the website for paragraphs font-family: 'Roboto', sans-serif;
 - Exo font used throughout the website for headings font-family: 'Exo', sans-serif;
 
- The main purposes of this website is learning how to implement interactive frontend components with javascript and jQuery while extending my styling skills with SCSS, so 
- every section is built around one or many interactive components and all styles in CSS files are generated from SCSS file that I implemented all in responsive fashion.
-
+ 
 ## Static components: 
 
 ### _Main menu_
